@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="oFr-ae-ie1">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="0Wc-sa-CwK" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="epN-kK-mKh"/>
+                        <viewControllerLayoutGuide type="bottom" id="7GR-g4-fAY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jWf-xR-tjE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtb-0U-QAi">
+                                <rect key="frame" x="310" y="80" width="45" height="45"/>
+                                <color key="backgroundColor" red="0.77254901960784317" green="0.047058823529411764" blue="0.12941176470588237" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Egl-Qs-uqH"/>
+                                    <constraint firstAttribute="width" constant="45" id="sSx-iC-hkq"/>
+                                </constraints>
+                                <state key="normal" image="search-btn-icon"/>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="0Wc-sa-CwK" eventType="touchUpInside" id="e8o-qe-DEn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNm-aH-sdh">
+                                <rect key="frame" x="20" y="185" width="335" height="45"/>
+                                <color key="backgroundColor" red="0.14901960784313725" green="0.46274509803921571" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="kCR-eU-xeU"/>
+                                </constraints>
+                                <state key="normal" title="Tìm kiếm nâng cao">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="advanceSearchButtonPressed:" destination="0Wc-sa-CwK" eventType="touchUpInside" id="g0V-Xa-YSs"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập tên bệnh viện" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AD2-9G-df6">
+                                <rect key="frame" x="20" y="80" width="280" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="hpp-8o-eJo"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zNm-aH-sdh" secondAttribute="trailing" constant="20" id="2ag-R9-D1b"/>
+                            <constraint firstItem="AD2-9G-df6" firstAttribute="top" secondItem="epN-kK-mKh" secondAttribute="bottom" constant="60" id="D5C-sN-Ytn"/>
+                            <constraint firstAttribute="trailing" secondItem="Jtb-0U-QAi" secondAttribute="trailing" constant="20" id="NGC-dE-8g5"/>
+                            <constraint firstItem="zNm-aH-sdh" firstAttribute="top" secondItem="AD2-9G-df6" secondAttribute="bottom" constant="60" id="RU8-5U-kra"/>
+                            <constraint firstItem="zNm-aH-sdh" firstAttribute="leading" secondItem="jWf-xR-tjE" secondAttribute="leading" constant="20" id="XvG-3s-SNZ"/>
+                            <constraint firstItem="Jtb-0U-QAi" firstAttribute="leading" secondItem="AD2-9G-df6" secondAttribute="trailing" constant="10" id="fnp-ej-U4p"/>
+                            <constraint firstItem="Jtb-0U-QAi" firstAttribute="top" secondItem="epN-kK-mKh" secondAttribute="bottom" constant="60" id="pNc-YY-ygV"/>
+                            <constraint firstItem="AD2-9G-df6" firstAttribute="leading" secondItem="jWf-xR-tjE" secondAttribute="leading" constant="20" id="rgt-38-U7D"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="advanceSearchButton" destination="zNm-aH-sdh" id="CUj-N7-XCY"/>
+                        <outlet property="searchButton" destination="Jtb-0U-QAi" id="q49-ze-OBJ"/>
+                        <outlet property="searchTextFiled" destination="AD2-9G-df6" id="0Rd-lF-ZJ8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUB-wR-bc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71" y="92"/>
+        </scene>
+        <!--Advance Search View Controller-->
+        <scene sceneID="vRG-6M-5cn">
+            <objects>
+                <viewController storyboardIdentifier="AdvanceSearchViewController" id="e3E-wU-nCO" customClass="AdvanceSearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sgq-gx-G9K"/>
+                        <viewControllerLayoutGuide type="bottom" id="zbn-lD-InA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gys-j7-sPD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XzN-nW-dXw" userLabel="City Container View">
+                                <rect key="frame" x="20" y="80" width="335" height="45"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="IQDropDownTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GMj-6a-mI2" customClass="IQDropDownTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caret-down" translatesAutoresizingMaskIntoConstraints="NO" id="zuU-ak-o9h">
+                                        <rect key="frame" x="305" y="16.5" width="20" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="4uU-IO-zKt"/>
+                                            <constraint firstAttribute="height" constant="12" id="Vbn-vR-ZDf"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GMj-6a-mI2" secondAttribute="trailing" id="6X6-vm-pUV"/>
+                                    <constraint firstAttribute="trailing" secondItem="zuU-ak-o9h" secondAttribute="trailing" constant="10" id="82M-92-xZp"/>
+                                    <constraint firstItem="zuU-ak-o9h" firstAttribute="centerY" secondItem="XzN-nW-dXw" secondAttribute="centerY" id="Pa3-Dp-RIf"/>
+                                    <constraint firstAttribute="height" constant="45" id="YBy-hL-Oa1"/>
+                                    <constraint firstAttribute="bottom" secondItem="GMj-6a-mI2" secondAttribute="bottom" id="bl5-y4-Dhd"/>
+                                    <constraint firstItem="GMj-6a-mI2" firstAttribute="top" secondItem="XzN-nW-dXw" secondAttribute="top" id="deb-Mg-EYc"/>
+                                    <constraint firstItem="GMj-6a-mI2" firstAttribute="leading" secondItem="XzN-nW-dXw" secondAttribute="leading" id="rXn-9a-c1R"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LK8-gd-47V" userLabel="District Container View">
+                                <rect key="frame" x="20" y="135" width="335" height="45"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Uo-de-ISx" customClass="IQDropDownTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caret-down" translatesAutoresizingMaskIntoConstraints="NO" id="I23-Ku-dr1">
+                                        <rect key="frame" x="305" y="16.5" width="20" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="N6s-Ft-T2R"/>
+                                            <constraint firstAttribute="width" constant="20" id="UyI-y8-2tm"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="2Uo-de-ISx" firstAttribute="top" secondItem="LK8-gd-47V" secondAttribute="top" id="3Vs-XV-zvY"/>
+                                    <constraint firstItem="2Uo-de-ISx" firstAttribute="leading" secondItem="LK8-gd-47V" secondAttribute="leading" id="4w1-dl-6ec"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Uo-de-ISx" secondAttribute="bottom" id="8XH-ZC-kp1"/>
+                                    <constraint firstAttribute="height" constant="45" id="Bg6-gt-BOw"/>
+                                    <constraint firstItem="I23-Ku-dr1" firstAttribute="centerY" secondItem="LK8-gd-47V" secondAttribute="centerY" id="SBP-xl-IbO"/>
+                                    <constraint firstAttribute="trailing" secondItem="I23-Ku-dr1" secondAttribute="trailing" constant="10" id="haR-mx-oRd"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Uo-de-ISx" secondAttribute="trailing" id="iwh-Nu-PYd"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEj-ED-aYG">
+                                <rect key="frame" x="20" y="220" width="335" height="45"/>
+                                <color key="backgroundColor" red="0.14901960784313725" green="0.46274509803921571" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="gFE-AV-9l8"/>
+                                </constraints>
+                                <state key="normal" title="Tìm kiếm">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchPressed:" destination="e3E-wU-nCO" eventType="touchUpInside" id="sXr-mP-MGd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LK8-gd-47V" firstAttribute="leading" secondItem="gys-j7-sPD" secondAttribute="leading" constant="20" id="0Cc-2Y-KHp"/>
+                            <constraint firstAttribute="trailing" secondItem="LK8-gd-47V" secondAttribute="trailing" constant="20" id="1SX-op-JYd"/>
+                            <constraint firstItem="XzN-nW-dXw" firstAttribute="leading" secondItem="gys-j7-sPD" secondAttribute="leading" constant="20" id="4nb-wE-n1c"/>
+                            <constraint firstItem="LK8-gd-47V" firstAttribute="top" secondItem="XzN-nW-dXw" secondAttribute="bottom" constant="10" id="AkF-74-n5b"/>
+                            <constraint firstAttribute="trailing" secondItem="bEj-ED-aYG" secondAttribute="trailing" constant="20" id="NpM-dW-kDg"/>
+                            <constraint firstItem="XzN-nW-dXw" firstAttribute="top" secondItem="Sgq-gx-G9K" secondAttribute="bottom" constant="60" id="YtB-U8-8lq"/>
+                            <constraint firstAttribute="trailing" secondItem="XzN-nW-dXw" secondAttribute="trailing" constant="20" id="lbT-DY-d0q"/>
+                            <constraint firstItem="bEj-ED-aYG" firstAttribute="leading" secondItem="gys-j7-sPD" secondAttribute="leading" constant="20" id="w5m-6U-Vpl"/>
+                            <constraint firstItem="bEj-ED-aYG" firstAttribute="top" secondItem="LK8-gd-47V" secondAttribute="bottom" constant="40" id="zGW-Dl-iOp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityContainerView" destination="XzN-nW-dXw" id="KZF-01-NTs"/>
+                        <outlet property="cityTextField" destination="GMj-6a-mI2" id="Vy4-SE-Onu"/>
+                        <outlet property="districtContainerView" destination="LK8-gd-47V" id="OPA-2b-YPU"/>
+                        <outlet property="districtTextField" destination="2Uo-de-ISx" id="Zai-At-7bh"/>
+                        <outlet property="searchButton" destination="bEj-ED-aYG" id="4qH-gG-RUf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1e-6F-kjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="645.60000000000002" y="90.404797601199405"/>
+        </scene>
+        <!--Search Result View Controller-->
+        <scene sceneID="vix-tK-pjb">
+            <objects>
+                <viewController storyboardIdentifier="SearchResultViewController" id="PRu-X4-fTQ" customClass="SearchResultViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YtE-u4-37Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="r1A-hf-IhG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7h1-BA-oLg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j1j-9i-Flm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="r1A-hf-IhG" firstAttribute="top" secondItem="j1j-9i-Flm" secondAttribute="bottom" id="XcC-c8-WvV"/>
+                            <constraint firstItem="j1j-9i-Flm" firstAttribute="top" secondItem="7h1-BA-oLg" secondAttribute="top" id="aKj-5L-FQo"/>
+                            <constraint firstItem="j1j-9i-Flm" firstAttribute="leading" secondItem="7h1-BA-oLg" secondAttribute="leading" id="aNJ-jB-rbC"/>
+                            <constraint firstAttribute="trailing" secondItem="j1j-9i-Flm" secondAttribute="trailing" id="z8C-TZ-A8t"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="49j-eW-wnT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1376.8" y="91.304347826086968"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="caret-down" width="20" height="12"/>
+        <image name="search-btn-icon" width="30" height="31"/>
+    </resources>
+</document>
