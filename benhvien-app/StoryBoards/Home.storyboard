@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -198,9 +199,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j1j-9i-Flm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j1j-9i-Flm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="ZAf-kp-JC7">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZAf-kp-JC7" id="SBY-Q5-jVa">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-bg" translatesAutoresizingMaskIntoConstraints="NO" id="EgU-ro-Z8k">
+                                                    <rect key="frame" x="10" y="10" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="fxm-gB-Aef"/>
+                                                        <constraint firstAttribute="height" constant="70" id="yeP-Ai-htS"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Kj-XZ-PPv">
+                                                    <rect key="frame" x="80" y="0.0" width="262" height="89"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bệnh viện chấn thương chỉnh hình Tp Hồ Chí Minh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wE6-So-lZJ" userLabel="Hospital Name">
+                                                            <rect key="frame" x="10" y="0.0" width="252" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="45" id="qUi-yc-h6n"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ: 929 Trần Hưng Đạo-Phường 1-Quận 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ch-hb-tdO" userLabel="Address">
+                                                            <rect key="frame" x="10" y="45" width="252" height="22.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="22.5" id="fks-6a-cp7"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Điện thoại: 08.39235791 - 3923582" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbJ-YF-nb1" userLabel="Phone">
+                                                            <rect key="frame" x="10" y="68" width="252" height="22.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="22.5" id="2JX-JV-ZJK"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="0Ch-hb-tdO" secondAttribute="trailing" id="BF3-Ya-R4p"/>
+                                                        <constraint firstItem="wE6-So-lZJ" firstAttribute="leading" secondItem="2Kj-XZ-PPv" secondAttribute="leading" constant="10" id="Brm-vo-MxN"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BbJ-YF-nb1" secondAttribute="trailing" id="Fp4-8y-f4W"/>
+                                                        <constraint firstAttribute="trailing" secondItem="wE6-So-lZJ" secondAttribute="trailing" id="LfK-0f-CKi"/>
+                                                        <constraint firstItem="BbJ-YF-nb1" firstAttribute="leading" secondItem="2Kj-XZ-PPv" secondAttribute="leading" constant="10" id="VKL-Gg-bVm"/>
+                                                        <constraint firstItem="BbJ-YF-nb1" firstAttribute="top" secondItem="0Ch-hb-tdO" secondAttribute="bottom" id="ebo-4G-8Bc"/>
+                                                        <constraint firstItem="0Ch-hb-tdO" firstAttribute="top" secondItem="wE6-So-lZJ" secondAttribute="bottom" id="u3e-Hv-vgR"/>
+                                                        <constraint firstItem="0Ch-hb-tdO" firstAttribute="leading" secondItem="2Kj-XZ-PPv" secondAttribute="leading" constant="10" id="vON-Gh-V12"/>
+                                                        <constraint firstItem="wE6-So-lZJ" firstAttribute="top" secondItem="2Kj-XZ-PPv" secondAttribute="top" id="z4G-fk-inW"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EgU-ro-Z8k" firstAttribute="centerY" secondItem="SBY-Q5-jVa" secondAttribute="centerY" id="6zq-zG-6Nz"/>
+                                                <constraint firstAttribute="bottom" secondItem="2Kj-XZ-PPv" secondAttribute="bottom" id="Cor-Oy-yWu"/>
+                                                <constraint firstAttribute="trailing" secondItem="2Kj-XZ-PPv" secondAttribute="trailing" id="LyE-xb-pUw"/>
+                                                <constraint firstItem="2Kj-XZ-PPv" firstAttribute="top" secondItem="SBY-Q5-jVa" secondAttribute="top" id="POr-H1-Tlu"/>
+                                                <constraint firstAttribute="bottom" secondItem="2Kj-XZ-PPv" secondAttribute="bottom" id="V2p-kF-1Hl"/>
+                                                <constraint firstItem="2Kj-XZ-PPv" firstAttribute="leading" secondItem="EgU-ro-Z8k" secondAttribute="trailing" id="Z2Y-Mp-N23"/>
+                                                <constraint firstItem="EgU-ro-Z8k" firstAttribute="leading" secondItem="SBY-Q5-jVa" secondAttribute="leading" constant="10" id="tYk-aY-7LA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="PRu-X4-fTQ" id="dzx-Bg-dlK"/>
+                                    <outlet property="delegate" destination="PRu-X4-fTQ" id="AWs-Rn-lIy"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
@@ -220,5 +297,6 @@
     <resources>
         <image name="caret-down" width="20" height="12"/>
         <image name="search-btn-icon" width="30" height="31"/>
+        <image name="splash-bg" width="375" height="667"/>
     </resources>
 </document>
