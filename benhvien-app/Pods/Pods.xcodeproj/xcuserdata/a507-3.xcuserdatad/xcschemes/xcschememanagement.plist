@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KASlideShow.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,30 +34,45 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>279AA6726F52A334C45E85774BD21A3D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2EBA5A842616AFA4F4131B818C3EA989</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C36CB2CB977A4E7D954935096D00A1ED</key>
+		<key>483FF9218104547720529AFE481F017C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>737EC352947D44743B4E9D537B985114</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>93A67353D6C775CCEC153F92551399D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C6AD32235C68E82618C442A5559F12D6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C964E37DA46A9FD910444B206DE21792</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EB26813806AABAF4B63D7F95E97090FF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

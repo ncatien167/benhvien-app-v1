@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -101,7 +100,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caret-down" translatesAutoresizingMaskIntoConstraints="NO" id="zuU-ak-o9h">
-                                        <rect key="frame" x="305" y="16.5" width="20" height="12"/>
+                                        <rect key="frame" x="305" y="17" width="20" height="12"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="4uU-IO-zKt"/>
                                             <constraint firstAttribute="height" constant="12" id="Vbn-vR-ZDf"/>
@@ -130,7 +129,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caret-down" translatesAutoresizingMaskIntoConstraints="NO" id="I23-Ku-dr1">
-                                        <rect key="frame" x="305" y="16.5" width="20" height="12"/>
+                                        <rect key="frame" x="305" y="17" width="20" height="12"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="N6s-Ft-T2R"/>
                                             <constraint firstAttribute="width" constant="20" id="UyI-y8-2tm"/>
@@ -199,79 +198,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j1j-9i-Flm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j1j-9i-Flm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="ZAf-kp-JC7">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="91" id="ZAf-kp-JC7" customClass="HospitalTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZAf-kp-JC7" id="SBY-Q5-jVa">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="89.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZAf-kp-JC7" id="SBY-Q5-jVa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-bg" translatesAutoresizingMaskIntoConstraints="NO" id="EgU-ro-Z8k">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EgU-ro-Z8k">
                                                     <rect key="frame" x="10" y="10" width="70" height="70"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="fxm-gB-Aef"/>
-                                                        <constraint firstAttribute="height" constant="70" id="yeP-Ai-htS"/>
+                                                        <constraint firstAttribute="height" constant="70" id="7sZ-Jj-EPe"/>
+                                                        <constraint firstAttribute="width" constant="70" id="u0I-mR-jY2"/>
                                                     </constraints>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Kj-XZ-PPv">
-                                                    <rect key="frame" x="80" y="0.0" width="262" height="89"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bệnh viện chấn thương chỉnh hình Tp Hồ Chí Minh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wE6-So-lZJ" userLabel="Hospital Name">
-                                                            <rect key="frame" x="10" y="0.0" width="252" height="45"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="45" id="qUi-yc-h6n"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ: 929 Trần Hưng Đạo-Phường 1-Quận 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ch-hb-tdO" userLabel="Address">
-                                                            <rect key="frame" x="10" y="45" width="252" height="22.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="22.5" id="fks-6a-cp7"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Điện thoại: 08.39235791 - 3923582" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbJ-YF-nb1" userLabel="Phone">
-                                                            <rect key="frame" x="10" y="68" width="252" height="22.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="22.5" id="2JX-JV-ZJK"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bệnh viện chấn thương chỉnh hình Tp Hồ Chí Minh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoK-PG-Dw6">
+                                                    <rect key="frame" x="90" y="10" width="253" height="33.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Điện thoại: 08-30547213" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b26-1W-R0n">
+                                                    <rect key="frame" x="90" y="66" width="245" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="deW-bJ-2uR">
+                                                    <rect key="frame" x="353" y="35.5" width="12" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="0Ch-hb-tdO" secondAttribute="trailing" id="BF3-Ya-R4p"/>
-                                                        <constraint firstItem="wE6-So-lZJ" firstAttribute="leading" secondItem="2Kj-XZ-PPv" secondAttribute="leading" constant="10" id="Brm-vo-MxN"/>
-                                                        <constraint firstAttribute="trailing" secondItem="BbJ-YF-nb1" secondAttribute="trailing" id="Fp4-8y-f4W"/>
-                                                        <constraint firstAttribute="trailing" secondItem="wE6-So-lZJ" secondAttribute="trailing" id="LfK-0f-CKi"/>
-                                                        <constraint firstItem="BbJ-YF-nb1" firstAttribute="leading" secondItem="2Kj-XZ-PPv" secondAttribute="leading" constant="10" id="VKL-Gg-bVm"/>
-                                                        <constraint firstItem="BbJ-YF-nb1" firstAttribute="top" secondItem="0Ch-hb-tdO" secondAttribute="bottom" id="ebo-4G-8Bc"/>
-                                                        <constraint firstItem="0Ch-hb-tdO" firstAttribute="top" secondItem="wE6-So-lZJ" secondAttribute="bottom" id="u3e-Hv-vgR"/>
-                                                        <constraint firstItem="0Ch-hb-tdO" firstAttribute="leading" secondItem="2Kj-XZ-PPv" secondAttribute="leading" constant="10" id="vON-Gh-V12"/>
-                                                        <constraint firstItem="wE6-So-lZJ" firstAttribute="top" secondItem="2Kj-XZ-PPv" secondAttribute="top" id="z4G-fk-inW"/>
+                                                        <constraint firstAttribute="height" constant="20" id="LyR-E5-dCd"/>
+                                                        <constraint firstAttribute="width" constant="12" id="ge4-ZQ-B3E"/>
                                                     </constraints>
-                                                </view>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ: 629 Trần Hưng Đạo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zag-LV-mnb">
+                                                    <rect key="frame" x="90" y="51.5" width="245" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="EgU-ro-Z8k" firstAttribute="centerY" secondItem="SBY-Q5-jVa" secondAttribute="centerY" id="6zq-zG-6Nz"/>
-                                                <constraint firstAttribute="bottom" secondItem="2Kj-XZ-PPv" secondAttribute="bottom" id="Cor-Oy-yWu"/>
-                                                <constraint firstAttribute="trailing" secondItem="2Kj-XZ-PPv" secondAttribute="trailing" id="LyE-xb-pUw"/>
-                                                <constraint firstItem="2Kj-XZ-PPv" firstAttribute="top" secondItem="SBY-Q5-jVa" secondAttribute="top" id="POr-H1-Tlu"/>
-                                                <constraint firstAttribute="bottom" secondItem="2Kj-XZ-PPv" secondAttribute="bottom" id="V2p-kF-1Hl"/>
-                                                <constraint firstItem="2Kj-XZ-PPv" firstAttribute="leading" secondItem="EgU-ro-Z8k" secondAttribute="trailing" id="Z2Y-Mp-N23"/>
-                                                <constraint firstItem="EgU-ro-Z8k" firstAttribute="leading" secondItem="SBY-Q5-jVa" secondAttribute="leading" constant="10" id="tYk-aY-7LA"/>
+                                                <constraint firstAttribute="trailing" secondItem="deW-bJ-2uR" secondAttribute="trailing" constant="10" id="GIw-lT-OY3"/>
+                                                <constraint firstItem="b26-1W-R0n" firstAttribute="leading" secondItem="EgU-ro-Z8k" secondAttribute="trailing" constant="10" id="KGB-ev-aHG"/>
+                                                <constraint firstItem="EgU-ro-Z8k" firstAttribute="leading" secondItem="SBY-Q5-jVa" secondAttribute="leading" constant="10" id="KYV-oa-94r"/>
+                                                <constraint firstItem="deW-bJ-2uR" firstAttribute="centerY" secondItem="SBY-Q5-jVa" secondAttribute="centerY" id="T7K-ml-HeU"/>
+                                                <constraint firstAttribute="trailing" secondItem="b26-1W-R0n" secondAttribute="trailing" constant="40" id="Whc-CY-INr"/>
+                                                <constraint firstItem="b26-1W-R0n" firstAttribute="top" secondItem="Zag-LV-mnb" secondAttribute="bottom" id="ZHk-14-G0C"/>
+                                                <constraint firstItem="NoK-PG-Dw6" firstAttribute="top" secondItem="SBY-Q5-jVa" secondAttribute="top" constant="10" id="bRT-pq-jLC"/>
+                                                <constraint firstItem="NoK-PG-Dw6" firstAttribute="leading" secondItem="EgU-ro-Z8k" secondAttribute="trailing" constant="10" id="bW7-IL-LQh"/>
+                                                <constraint firstAttribute="trailing" secondItem="Zag-LV-mnb" secondAttribute="trailing" constant="40" id="gdd-es-Crf"/>
+                                                <constraint firstItem="Zag-LV-mnb" firstAttribute="leading" secondItem="EgU-ro-Z8k" secondAttribute="trailing" constant="10" id="nCR-L2-BOB"/>
+                                                <constraint firstItem="deW-bJ-2uR" firstAttribute="leading" secondItem="NoK-PG-Dw6" secondAttribute="trailing" constant="10" id="nCz-0R-eAh"/>
+                                                <constraint firstItem="EgU-ro-Z8k" firstAttribute="top" secondItem="SBY-Q5-jVa" secondAttribute="top" constant="10" id="r6b-N8-OTN"/>
+                                                <constraint firstAttribute="bottom" secondItem="b26-1W-R0n" secondAttribute="bottom" constant="10" id="wc1-T9-Ln6"/>
+                                                <constraint firstAttribute="bottom" secondItem="EgU-ro-Z8k" secondAttribute="bottom" constant="10" id="zm5-88-1Pd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="hospitalAddressLable" destination="Zag-LV-mnb" id="cwn-Il-lwa"/>
+                                            <outlet property="hospitalNameLable" destination="NoK-PG-Dw6" id="2up-ep-tFo"/>
+                                            <outlet property="hospitalPhoneLable" destination="b26-1W-R0n" id="jBp-jo-lvS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -285,18 +278,40 @@
                             <constraint firstItem="r1A-hf-IhG" firstAttribute="top" secondItem="j1j-9i-Flm" secondAttribute="bottom" id="XcC-c8-WvV"/>
                             <constraint firstItem="j1j-9i-Flm" firstAttribute="top" secondItem="7h1-BA-oLg" secondAttribute="top" id="aKj-5L-FQo"/>
                             <constraint firstItem="j1j-9i-Flm" firstAttribute="leading" secondItem="7h1-BA-oLg" secondAttribute="leading" id="aNJ-jB-rbC"/>
+                            <constraint firstItem="r1A-hf-IhG" firstAttribute="top" secondItem="j1j-9i-Flm" secondAttribute="bottom" id="fW3-jD-5ye"/>
                             <constraint firstAttribute="trailing" secondItem="j1j-9i-Flm" secondAttribute="trailing" id="z8C-TZ-A8t"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultTableView" destination="j1j-9i-Flm" id="X2V-mv-dqK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49j-eW-wnT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1376.8" y="91.304347826086968"/>
         </scene>
+        <!--Hospital Detail View Controller-->
+        <scene sceneID="d2Q-4N-Vfj">
+            <objects>
+                <viewController storyboardIdentifier="HospitalDetailViewController" id="xQq-ZN-m9Q" customClass="HospitalDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="db8-WF-AmI"/>
+                        <viewControllerLayoutGuide type="bottom" id="omZ-AN-4bk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xNJ-op-EBT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f88-wV-y8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2042" y="90"/>
+        </scene>
     </scenes>
     <resources>
         <image name="caret-down" width="20" height="12"/>
+        <image name="right-arrow" width="9" height="14"/>
         <image name="search-btn-icon" width="30" height="31"/>
-        <image name="splash-bg" width="375" height="667"/>
     </resources>
 </document>
