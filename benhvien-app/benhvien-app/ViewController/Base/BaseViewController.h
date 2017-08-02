@@ -12,10 +12,8 @@
 #import "UIAlertController+Blocks.h"
 
 @interface BaseViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *searchTextFiled;
-@property (weak, nonatomic) IBOutlet UIButton *searchButton;
-@property (weak, nonatomic) IBOutlet UIButton *advanceSearchButton;
 
 - (void)showMenuButton;
 - (void)showBackButton;
+
 @end

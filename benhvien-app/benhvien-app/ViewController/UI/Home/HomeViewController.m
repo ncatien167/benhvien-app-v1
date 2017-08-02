@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "AdvanceSearchViewController.h"
+
 @interface HomeViewController ()
 
 @end
@@ -25,22 +26,23 @@
 }
 
 - (void)setUpUserInterface {
-    self.searchTextFiled.layer.cornerRadius = 4.0;
-    self.searchTextFiled.layer.borderWidth = 0.5;
-    self.searchTextFiled.layer.borderColor = [UIColor colorWithHex:0xC8C7CC].CGColor;
-    
+    //setup search text field
+    self.searchTextField.layer.cornerRadius = 4.0;
+    self.searchTextField.layer.borderWidth = 0.5;
+    self.searchTextField.layer.borderColor = [UIColor colorWithHex:0xC8C7CC].CGColor;
+    //setup search button
     self.searchButton.layer.cornerRadius = 4.0;
-    
+    //setup advance search button
     self.advanceSearchButton.layer.cornerRadius = 4.0;
     [self showMenuButton];
 }
 
 - (IBAction)searchButtonPressed:(id)sender {
-    
 }
 
 - (IBAction)advanceSearchButtonPressed:(id)sender {
     AdvanceSearchViewController *vc = (AdvanceSearchViewController *)[AdvanceSearchViewController instanceFromStoryboardName:@"Home"];
     [self.navigationController pushViewController:vc animated:true];
 }
+
 @end

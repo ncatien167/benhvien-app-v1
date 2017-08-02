@@ -10,17 +10,16 @@
 #import "HomeViewController.h"
 #import "UIViewController+Storyboard.h"
 #import "BaseNavigationController.h"
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupApplicationTheme];
     [self setupHomeScreen];
-    
     return YES;
 }
 
@@ -31,6 +30,7 @@
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
 }
+
 - (void)setupApplicationTheme {
     [UINavigationBar appearance].barTintColor = [UIColor colorWithHex:0xd2232a];
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
@@ -38,4 +38,5 @@
     NSDictionary *titleAttr = [[NSDictionary alloc] initWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil];
     [UINavigationBar appearance].titleTextAttributes = titleAttr;
 }
+
 @end

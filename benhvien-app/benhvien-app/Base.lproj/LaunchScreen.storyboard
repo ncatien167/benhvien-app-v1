@@ -22,9 +22,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-bg" translatesAutoresizingMaskIntoConstraints="NO" id="DGG-Gg-tNp">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.77254901960784317" green="0.047058823529411764" blue="0.12941176470588237" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-heart-icon" translatesAutoresizingMaskIntoConstraints="NO" id="QQb-uS-yd0">
-                                <rect key="frame" x="119.5" y="272.5" width="136" height="122"/>
+                                <rect key="frame" x="120" y="273" width="136" height="122"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="136" id="FBP-n8-cFY"/>
                                     <constraint firstAttribute="height" constant="122" id="e0n-TZ-udP"/>
@@ -33,12 +34,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="DGG-Gg-tNp" secondAttribute="trailing" id="BrI-Dp-MyL"/>
                             <constraint firstItem="QQb-uS-yd0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="KXj-FY-NDO"/>
-                            <constraint firstItem="DGG-Gg-tNp" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="cMt-pe-l8U"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="DGG-Gg-tNp" secondAttribute="bottom" id="cWX-0g-rkd"/>
-                            <constraint firstItem="DGG-Gg-tNp" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="hED-Fs-a1t"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="DGG-Gg-tNp" secondAttribute="bottom" id="g5L-CE-IIO"/>
+                            <constraint firstItem="DGG-Gg-tNp" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="kb7-JS-EXA"/>
                             <constraint firstItem="QQb-uS-yd0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lQR-Jt-BIn"/>
+                            <constraint firstAttribute="trailing" secondItem="DGG-Gg-tNp" secondAttribute="trailing" id="uD5-Nr-Ugx"/>
+                            <constraint firstItem="DGG-Gg-tNp" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="zl8-4C-hrC"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HospitalTableViewCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *hospitalNameLable;
 @property (weak, nonatomic) IBOutlet UILabel *hospitalAddressLable;
 @property (weak, nonatomic) IBOutlet UILabel *hospitalPhoneLable;

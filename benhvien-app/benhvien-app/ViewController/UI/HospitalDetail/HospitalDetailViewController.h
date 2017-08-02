@@ -8,6 +8,9 @@
 
 #import "BaseViewController.h"
 #import "Hospital.h"
+
 @interface HospitalDetailViewController : BaseViewController
+
 @property (strong, nonatomic) Hospital *hospital;
+
 @end

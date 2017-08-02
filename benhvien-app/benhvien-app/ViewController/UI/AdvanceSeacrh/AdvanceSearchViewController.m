@@ -8,6 +8,7 @@
 
 #import "AdvanceSearchViewController.h"
 #import "SearchResultViewController.h"
+
 @interface AdvanceSearchViewController ()
 
 @end
@@ -21,23 +22,25 @@
 
 - (void)setUpUserInterface{
     [self showBackButton];
+    //setup city container view
     self.cityContainerView.layer.cornerRadius = 4.0;
     self.cityContainerView.layer.borderWidth = 0.5;
     self.cityContainerView.layer.borderColor = [UIColor colorWithHex:0xC8C7CC].CGColor;
-    
+    //setup district container view
     self.districtContainerView.layer.cornerRadius = 4.0;
     self.districtContainerView.layer.borderWidth = 0.5;
     self.districtContainerView.layer.borderColor = [UIColor colorWithHex:0xC8C7CC].CGColor;
-    
+    //setup search button
     self.searchButton.layer.cornerRadius = 4.0;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
 }
 
 - (IBAction)searchPressed:(id)sender {
     SearchResultViewController *vc = (SearchResultViewController *)[SearchResultViewController instanceFromStoryboardName:@"Home"];
     [self.navigationController pushViewController:vc animated:true];
 }
+
 @end

@@ -15,12 +15,14 @@
 		EE53B4FC1F2F6B2400AD0AFA /* HLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE53B4F71F2F6B2400AD0AFA /* HLTableView.m */; };
 		EE53B4FD1F2F6B2400AD0AFA /* HLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE53B4F91F2F6B2400AD0AFA /* HLTableViewCell.m */; };
 		EE53B4FE1F2F6B2400AD0AFA /* HLTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = EE53B4FB1F2F6B2400AD0AFA /* HLTableViewSection.m */; };
-		EE53B5021F2F6D5E00AD0AFA /* ThumbIamgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE53B5011F2F6D5E00AD0AFA /* ThumbIamgeCell.m */; };
-		EE53B5041F2F6D8800AD0AFA /* ThumbIamgeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE53B5031F2F6D8800AD0AFA /* ThumbIamgeCell.xib */; };
-		EE53B5081F2F6EAA00AD0AFA /* HospitalNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE53B5061F2F6EAA00AD0AFA /* HospitalNameCell.m */; };
-		EE53B5091F2F6EAA00AD0AFA /* HospitalNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE53B5071F2F6EAA00AD0AFA /* HospitalNameCell.xib */; };
-		EE53B50D1F2F6FA100AD0AFA /* AddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE53B50B1F2F6FA100AD0AFA /* AddressCell.m */; };
-		EE53B50E1F2F6FA100AD0AFA /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE53B50C1F2F6FA100AD0AFA /* AddressCell.xib */; };
+		EE790E3F1F31F04600043139 /* AddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE790E371F31F04600043139 /* AddressCell.m */; };
+		EE790E401F31F04600043139 /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE790E381F31F04600043139 /* AddressCell.xib */; };
+		EE790E411F31F04600043139 /* HospitalNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE790E3A1F31F04600043139 /* HospitalNameCell.m */; };
+		EE790E421F31F04600043139 /* HospitalNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE790E3B1F31F04600043139 /* HospitalNameCell.xib */; };
+		EE790E431F31F04600043139 /* ThumbIamgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE790E3D1F31F04600043139 /* ThumbIamgeCell.m */; };
+		EE790E441F31F04600043139 /* ThumbIamgeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE790E3E1F31F04600043139 /* ThumbIamgeCell.xib */; };
+		EE790E481F31F22300043139 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE790E461F31F22300043139 /* DetailCell.m */; };
+		EE790E491F31F22300043139 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE790E471F31F22300043139 /* DetailCell.xib */; };
 		EECA5F4F1F2B5982005C148F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA5F4E1F2B5982005C148F /* main.m */; };
 		EECA5F521F2B5982005C148F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA5F511F2B5982005C148F /* AppDelegate.m */; };
 		EECA5F5A1F2B5982005C148F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECA5F591F2B5982005C148F /* Assets.xcassets */; };
@@ -58,15 +60,18 @@
 		EE53B4F91F2F6B2400AD0AFA /* HLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTableViewCell.m; sourceTree = "<group>"; };
 		EE53B4FA1F2F6B2400AD0AFA /* HLTableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableViewSection.h; sourceTree = "<group>"; };
 		EE53B4FB1F2F6B2400AD0AFA /* HLTableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTableViewSection.m; sourceTree = "<group>"; };
-		EE53B5001F2F6D5E00AD0AFA /* ThumbIamgeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbIamgeCell.h; sourceTree = "<group>"; };
-		EE53B5011F2F6D5E00AD0AFA /* ThumbIamgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbIamgeCell.m; sourceTree = "<group>"; };
-		EE53B5031F2F6D8800AD0AFA /* ThumbIamgeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThumbIamgeCell.xib; sourceTree = "<group>"; };
-		EE53B5051F2F6EAA00AD0AFA /* HospitalNameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalNameCell.h; sourceTree = "<group>"; };
-		EE53B5061F2F6EAA00AD0AFA /* HospitalNameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalNameCell.m; sourceTree = "<group>"; };
-		EE53B5071F2F6EAA00AD0AFA /* HospitalNameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalNameCell.xib; sourceTree = "<group>"; };
-		EE53B50A1F2F6FA100AD0AFA /* AddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressCell.h; sourceTree = "<group>"; };
-		EE53B50B1F2F6FA100AD0AFA /* AddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressCell.m; sourceTree = "<group>"; };
-		EE53B50C1F2F6FA100AD0AFA /* AddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
+		EE790E361F31F04600043139 /* AddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressCell.h; sourceTree = "<group>"; };
+		EE790E371F31F04600043139 /* AddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressCell.m; sourceTree = "<group>"; };
+		EE790E381F31F04600043139 /* AddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
+		EE790E391F31F04600043139 /* HospitalNameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalNameCell.h; sourceTree = "<group>"; };
+		EE790E3A1F31F04600043139 /* HospitalNameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalNameCell.m; sourceTree = "<group>"; };
+		EE790E3B1F31F04600043139 /* HospitalNameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalNameCell.xib; sourceTree = "<group>"; };
+		EE790E3C1F31F04600043139 /* ThumbIamgeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbIamgeCell.h; sourceTree = "<group>"; };
+		EE790E3D1F31F04600043139 /* ThumbIamgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbIamgeCell.m; sourceTree = "<group>"; };
+		EE790E3E1F31F04600043139 /* ThumbIamgeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThumbIamgeCell.xib; sourceTree = "<group>"; };
+		EE790E451F31F22300043139 /* DetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
+		EE790E461F31F22300043139 /* DetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCell.m; sourceTree = "<group>"; };
+		EE790E471F31F22300043139 /* DetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
 		EECA5F4A1F2B5982005C148F /* benhvien-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "benhvien-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECA5F4E1F2B5982005C148F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EECA5F501F2B5982005C148F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -144,7 +149,7 @@
 			children = (
 				EE53B4E81F2F5A2200AD0AFA /* HospitalDetailViewController.h */,
 				EE53B4E91F2F5A2200AD0AFA /* HospitalDetailViewController.m */,
-				EE53B4FF1F2F6C3200AD0AFA /* TableViewCells */,
+				EE790E351F31F04600043139 /* TableViewCells */,
 			);
 			path = HospitalDetail;
 			sourceTree = "<group>";
@@ -171,20 +176,23 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		EE53B4FF1F2F6C3200AD0AFA /* TableViewCells */ = {
+		EE790E351F31F04600043139 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				EE53B5001F2F6D5E00AD0AFA /* ThumbIamgeCell.h */,
-				EE53B5011F2F6D5E00AD0AFA /* ThumbIamgeCell.m */,
-				EE53B5031F2F6D8800AD0AFA /* ThumbIamgeCell.xib */,
-				EE53B5051F2F6EAA00AD0AFA /* HospitalNameCell.h */,
-				EE53B5061F2F6EAA00AD0AFA /* HospitalNameCell.m */,
-				EE53B5071F2F6EAA00AD0AFA /* HospitalNameCell.xib */,
-				EE53B50A1F2F6FA100AD0AFA /* AddressCell.h */,
-				EE53B50B1F2F6FA100AD0AFA /* AddressCell.m */,
-				EE53B50C1F2F6FA100AD0AFA /* AddressCell.xib */,
+				EE790E361F31F04600043139 /* AddressCell.h */,
+				EE790E371F31F04600043139 /* AddressCell.m */,
+				EE790E381F31F04600043139 /* AddressCell.xib */,
+				EE790E391F31F04600043139 /* HospitalNameCell.h */,
+				EE790E3A1F31F04600043139 /* HospitalNameCell.m */,
+				EE790E3B1F31F04600043139 /* HospitalNameCell.xib */,
+				EE790E3C1F31F04600043139 /* ThumbIamgeCell.h */,
+				EE790E3D1F31F04600043139 /* ThumbIamgeCell.m */,
+				EE790E3E1F31F04600043139 /* ThumbIamgeCell.xib */,
+				EE790E451F31F22300043139 /* DetailCell.h */,
+				EE790E461F31F22300043139 /* DetailCell.m */,
+				EE790E471F31F22300043139 /* DetailCell.xib */,
 			);
-			name = TableViewCells;
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		EECA5F411F2B5982005C148F = {
@@ -386,14 +394,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE53B5091F2F6EAA00AD0AFA /* HospitalNameCell.xib in Resources */,
+				EE790E421F31F04600043139 /* HospitalNameCell.xib in Resources */,
 				EECA5F5D1F2B5982005C148F /* LaunchScreen.storyboard in Resources */,
 				EECA5F791F2B5A29005C148F /* FirstLogin.storyboard in Resources */,
 				EECA5F5A1F2B5982005C148F /* Assets.xcassets in Resources */,
 				EECA5F901F2B5A87005C148F /* Home.storyboard in Resources */,
-				EE53B5041F2F6D8800AD0AFA /* ThumbIamgeCell.xib in Resources */,
-				EE53B50E1F2F6FA100AD0AFA /* AddressCell.xib in Resources */,
+				EE790E401F31F04600043139 /* AddressCell.xib in Resources */,
+				EE790E441F31F04600043139 /* ThumbIamgeCell.xib in Resources */,
 				EECA5F7A1F2B5A29005C148F /* Login.storyboard in Resources */,
+				EE790E491F31F22300043139 /* DetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,18 +461,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE53B50D1F2F6FA100AD0AFA /* AddressCell.m in Sources */,
 				EECA5F8B1F2B5A4F005C148F /* BaseTapBarController.m in Sources */,
 				EE53B4FD1F2F6B2400AD0AFA /* HLTableViewCell.m in Sources */,
+				EE790E3F1F31F04600043139 /* AddressCell.m in Sources */,
 				EECA5F711F2B5A14005C148F /* UIAlertController+Blocks.m in Sources */,
 				EE53B4FC1F2F6B2400AD0AFA /* HLTableView.m in Sources */,
+				EE790E481F31F22300043139 /* DetailCell.m in Sources */,
 				EECA5F8C1F2B5A4F005C148F /* BaseViewController.m in Sources */,
 				EE53B4EA1F2F5A2200AD0AFA /* HospitalDetailViewController.m in Sources */,
 				EECA5F751F2B5A14005C148F /* UIViewController+Storyboard.m in Sources */,
 				EECA5F741F2B5A14005C148F /* UIView+Nib.m in Sources */,
 				EEF433021F2B6F2300BE2E40 /* HomeViewController.m in Sources */,
 				EECA5F721F2B5A14005C148F /* UIColor+Hex.m in Sources */,
-				EE53B5021F2F6D5E00AD0AFA /* ThumbIamgeCell.m in Sources */,
 				EE53B4FE1F2F6B2400AD0AFA /* HLTableViewSection.m in Sources */,
 				EECA5F8A1F2B5A4F005C148F /* BaseNavigationController.m in Sources */,
 				EE53B4F41F2F5CBF00AD0AFA /* HospitalTableViewCell.m in Sources */,
@@ -471,8 +480,9 @@
 				EEF432FE1F2B6F1A00BE2E40 /* AdvanceSearchViewController.m in Sources */,
 				EE53B4F11F2F5B7800AD0AFA /* Hospital.m in Sources */,
 				EECA5F731F2B5A14005C148F /* UITextField+Padding.m in Sources */,
+				EE790E431F31F04600043139 /* ThumbIamgeCell.m in Sources */,
 				EECA5F521F2B5982005C148F /* AppDelegate.m in Sources */,
-				EE53B5081F2F6EAA00AD0AFA /* HospitalNameCell.m in Sources */,
+				EE790E411F31F04600043139 /* HospitalNameCell.m in Sources */,
 				EECA5F4F1F2B5982005C148F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

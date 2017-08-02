@@ -10,4 +10,8 @@
 
 @interface HomeViewController : BaseViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
+@property (weak, nonatomic) IBOutlet UIButton *advanceSearchButton;
+
 @end

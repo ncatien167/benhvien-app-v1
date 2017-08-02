@@ -33,12 +33,10 @@
     [self.hospitals addObject:hospital1];
     [self.hospitals addObject:hospital1];
     [self.hospitals addObject:hospital1];
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
 }
 
 - (void)setUpUserInterface {
@@ -46,15 +44,17 @@
     self.resultTableView.estimatedRowHeight = 91.0;
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#pragma mark - UITableViewDelegate, UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.hospitals.count;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellId = @"Cell";
     HospitalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     if(cell == nil){
@@ -70,12 +70,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:true];
     Hospital *hospital = self.hospitals[indexPath.row];
-    [self gotoHospitalDEtailsSrceen:hospital];
+    [self gotoHospitalDetailsSrceen:hospital];
 }
 
-- (void)gotoHospitalDEtailsSrceen:(Hospital *)hospital {
+- (void)gotoHospitalDetailsSrceen:(Hospital *)hospital {
     HospitalDetailViewController *vc = (HospitalDetailViewController *)[HospitalDetailViewController instanceFromStoryboardName:@"Home"];
     vc.hospital = hospital;
     [self.navigationController pushViewController:vc animated:true];
 }
+
 @end

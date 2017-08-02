@@ -10,7 +10,6 @@
 
 @interface BaseViewController ()
 
-
 @end
 
 @implementation BaseViewController
@@ -35,10 +34,10 @@
 }
 
 - (IBAction)menuButtonPressed:(id)sender {
-    
 }
 
 - (IBAction)backButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:true];
 }
+
 @end
