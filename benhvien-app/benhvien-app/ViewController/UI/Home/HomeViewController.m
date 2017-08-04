@@ -38,6 +38,10 @@
 }
 
 - (IBAction)searchButtonPressed:(id)sender {
+    [self showHUD];
+    [ApiRequest loginWithEmail:@"haole@gmail.com" password:@"111111" completionBlock:^(ApiResponse *response, NSError *error) {
+        [self hideHUD];
+    }];
 }
 
 - (IBAction)advanceSearchButtonPressed:(id)sender {

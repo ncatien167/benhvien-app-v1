@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface BaseViewController ()
 
@@ -38,6 +39,18 @@
 
 - (IBAction)backButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:true];
+}
+
+- (void)showHUD {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD showHUDAddedTo:self.view animated:true];
+         });
+}
+
+- (void)hideHUD {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:self.view animated:true];
+    });
 }
 
 @end

@@ -10,10 +10,13 @@
 #import "UIViewController+Storyboard.h"
 #import "UIColor+Hex.h"
 #import "UIAlertController+Blocks.h"
+#import "ApiRequest.h"
 
 @interface BaseViewController : UIViewController
 
 - (void)showMenuButton;
 - (void)showBackButton;
+- (void)showHUD;
+- (void)hideHUD;
 
 @end
