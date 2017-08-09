@@ -9,7 +9,8 @@
 #ifndef ApiEndpoint_h
 #define ApiEndpoint_h
 
-#define BaseURL @"https://benhvien-app.herokuapp.com/api/v1/"
-#define Login   @"authenticate"
+#define BaseURL             @"https://benhvien-app.herokuapp.com/api/v1/"
+#define Login               @"authenticate"
+#define SearchByName        @"hospitals-name"
 
 #endif /* ApiEndpoint_h */

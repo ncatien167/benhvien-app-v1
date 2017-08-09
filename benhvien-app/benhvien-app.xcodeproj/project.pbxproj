@@ -43,6 +43,8 @@
 		EECA5F901F2B5A87005C148F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECA5F8F1F2B5A87005C148F /* Home.storyboard */; };
 		EEF432FE1F2B6F1A00BE2E40 /* AdvanceSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF432FD1F2B6F1A00BE2E40 /* AdvanceSearchViewController.m */; };
 		EEF433021F2B6F2300BE2E40 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF433011F2B6F2300BE2E40 /* HomeViewController.m */; };
+		EEFD26121F3B27A7002E84B2 /* MapAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD26101F3B27A7002E84B2 /* MapAddressCell.m */; };
+		EEFD26131F3B27A7002E84B2 /* MapAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFD26111F3B27A7002E84B2 /* MapAddressCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +114,9 @@
 		EEF432FD1F2B6F1A00BE2E40 /* AdvanceSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvanceSearchViewController.m; sourceTree = "<group>"; };
 		EEF433001F2B6F2300BE2E40 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		EEF433011F2B6F2300BE2E40 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		EEFD260F1F3B27A7002E84B2 /* MapAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAddressCell.h; sourceTree = "<group>"; };
+		EEFD26101F3B27A7002E84B2 /* MapAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAddressCell.m; sourceTree = "<group>"; };
+		EEFD26111F3B27A7002E84B2 /* MapAddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapAddressCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +220,9 @@
 				EE790E451F31F22300043139 /* DetailCell.h */,
 				EE790E461F31F22300043139 /* DetailCell.m */,
 				EE790E471F31F22300043139 /* DetailCell.xib */,
+				EEFD260F1F3B27A7002E84B2 /* MapAddressCell.h */,
+				EEFD26101F3B27A7002E84B2 /* MapAddressCell.m */,
+				EEFD26111F3B27A7002E84B2 /* MapAddressCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -428,6 +436,7 @@
 				EE790E441F31F04600043139 /* ThumbIamgeCell.xib in Resources */,
 				EECA5F7A1F2B5A29005C148F /* Login.storyboard in Resources */,
 				EE790E491F31F22300043139 /* DetailCell.xib in Resources */,
+				EEFD26131F3B27A7002E84B2 /* MapAddressCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +523,7 @@
 				EECA5F8C1F2B5A4F005C148F /* BaseViewController.m in Sources */,
 				EE53B4EA1F2F5A2200AD0AFA /* HospitalDetailViewController.m in Sources */,
 				EECA5F751F2B5A14005C148F /* UIViewController+Storyboard.m in Sources */,
+				EEFD26121F3B27A7002E84B2 /* MapAddressCell.m in Sources */,
 				EE3E156E1F34996C00504F12 /* ApiRequest.m in Sources */,
 				EECA5F741F2B5A14005C148F /* UIView+Nib.m in Sources */,
 				EEF433021F2B6F2300BE2E40 /* HomeViewController.m in Sources */,

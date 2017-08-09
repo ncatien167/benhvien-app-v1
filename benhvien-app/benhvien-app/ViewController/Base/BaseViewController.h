@@ -18,5 +18,6 @@
 - (void)showBackButton;
 - (void)showHUD;
 - (void)hideHUD;
+- (void)showMessage:(NSString *)message;
 
 @end

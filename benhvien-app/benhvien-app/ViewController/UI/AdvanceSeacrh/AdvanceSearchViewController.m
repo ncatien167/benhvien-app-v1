@@ -38,6 +38,7 @@
     [super didReceiveMemoryWarning];
 }
 
+
 - (IBAction)searchPressed:(id)sender {
     SearchResultViewController *vc = (SearchResultViewController *)[SearchResultViewController instanceFromStoryboardName:@"Home"];
     [self.navigationController pushViewController:vc animated:true];

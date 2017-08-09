@@ -38,10 +38,29 @@
 }
 
 - (IBAction)searchButtonPressed:(id)sender {
+    NSString *hospitalName = self.searchTextField.text;
+    [self validateHospitalName:hospitalName completion:^(BOOL isValidate, NSString *message){
+        if (isValidate) {
+            [self searchHospital:hospitalName];
+        }else {
+            [self showMessage:message];
+        }
+    }];
+}
+
+- (void)searchHospital:(NSString *)hostpitalName {
     [self showHUD];
-    [ApiRequest loginWithEmail:@"haole@gmail.com" password:@"111111" completionBlock:^(ApiResponse *response, NSError *error) {
+    [ApiRequest searchHospitalByName:hostpitalName completionBlock:^(ApiResponse *response, NSError *error) {
         [self hideHUD];
     }];
+}
+
+- (void)validateHospitalName:(NSString *)name completion:(void (^)(BOOL isValidate, NSString *message))completion {
+    if (!name || name.length == 0) {
+        completion(NO, @"Bạn phải nhập tên bệnh viện");
+        return;
+    }
+    completion(YES, @"");
 }
 
 - (IBAction)advanceSearchButtonPressed:(id)sender {

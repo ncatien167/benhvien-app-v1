@@ -14,5 +14,6 @@
 @interface ApiRequest : NSObject
 
 + (void)loginWithEmail:(NSString *)email password:(NSString *)password completionBlock:(ApiCompletionBlock)completion;
++ (void)searchHospitalByName:(NSString *)name completionBlock:(ApiCompletionBlock)completion;
 
 @end
