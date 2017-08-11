@@ -9,7 +9,19 @@
 #import <Foundation/Foundation.h>
 
 @interface Hospital : NSObject
-@property (strong, nonatomic) NSString *hospitalName;
-@property (strong, nonatomic) NSString *address;
-@property (strong, nonatomic) NSString *phoneNumber;
+
+@property (strong, nonatomic) NSString *hospitalId;
+@property (strong, nonatomic) NSString *avatar;
+@property (strong, nonatomic) NSString *city;
+@property (strong, nonatomic) NSString *hospitalDescription;
+@property (strong, nonatomic) NSString *district;
+@property (strong, nonatomic) NSArray *images;
+@property (nonatomic) double latitude;
+@property (nonatomic) double longitude;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSArray *phones;
+@property (strong, nonatomic) NSString *street;
+
++ (instancetype)initWithRespone:(NSDictionary *)response;
+
 @end

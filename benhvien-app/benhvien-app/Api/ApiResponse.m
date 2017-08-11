@@ -11,8 +11,26 @@
 @implementation ApiResponse
 
 + (instancetype)initWithRespone:(NSDictionary *)response {
-    ApiResponse *res = [[ApiResponse alloc] init];
-    return res;
+    ApiResponse *servoResponse = [[ApiResponse alloc] init];
+    [servoResponse parseResponse:response];
+    return servoResponse;
+}
+
+- (void)parseResponse:(NSDictionary *)response {  
+    NSString *message = [response objectForKey:@"message"];
+    if ([message isKindOfClass:[NSNull class]]) {
+        self.message = @"";
+    }else {
+        self.message = message;
+    }
+    
+    NSNumber *success = [response objectForKey:@"success"];
+    if (success) {
+        self.sucsess = [success boolValue];
+    }
+    
+    self.data = [response objectForKey:@"data"];
+    self.originalResponse = response;
 }
 
 @end

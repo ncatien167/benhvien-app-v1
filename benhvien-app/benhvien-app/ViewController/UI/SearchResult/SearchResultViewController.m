@@ -20,23 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Kết quả";
-    self.hospitals = [NSMutableArray new];
-    Hospital *hospital1 = [Hospital new];
-    hospital1.hospitalName = @"Bệnh viện chấn thương chỉnh hình Tp Hồ Chí minh";
-    hospital1.address = @"629 Trần hưng đạo phường 1";
-    hospital1.phoneNumber = @"08-30251642";
-    
-    [self.hospitals addObject:hospital1];
-    [self.hospitals addObject:hospital1];
-    [self.hospitals addObject:hospital1];
-    [self.hospitals addObject:hospital1];
-    [self.hospitals addObject:hospital1];
-    [self.hospitals addObject:hospital1];
-    [self.hospitals addObject:hospital1];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.resultTableView reloadData];
 }
 
 - (void)setUpUserInterface {
@@ -61,9 +52,10 @@
         cell = [[HospitalTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     Hospital *hos = self.hospitals[indexPath.row];
-    cell.hospitalNameLable.text = hos.hospitalName;
-    cell.hospitalAddressLable.text = hos.address;
-    cell.hospitalPhoneLable.text = hos.phoneNumber;
+    cell.hospitalNameLable.text = hos.name;
+    cell.hospitalPhoneLable.text = [NSString stringWithFormat:@"%@",hos.phones];
+    cell.hospitalAddressLable.text = hos.street;
+    cell.hospitalImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",hos.images]]]];
     return cell;
 }
 

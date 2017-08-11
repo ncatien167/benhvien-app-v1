@@ -53,8 +53,14 @@
     });
 }
 
-- (void)showMessage:(NSString *)message {
-    [UIAlertController showAlertInViewController:self withTitle:@"Lỗi" message:message cancelButtonTitle:@"OK" destructiveButtonTitle:nil otherButtonTitles:nil tapBlock:nil];
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
+    [UIAlertController showAlertInViewController:self
+                                       withTitle:@"Lỗi"
+                                         message:message
+                               cancelButtonTitle:@"OK"
+                          destructiveButtonTitle:nil
+                               otherButtonTitles:nil
+                                        tapBlock:nil];
 }
 
 @end

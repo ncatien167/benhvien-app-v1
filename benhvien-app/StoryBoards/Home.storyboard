@@ -218,26 +218,26 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bệnh viện chấn thương chỉnh hình Tp Hồ Chí Minh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoK-PG-Dw6">
-                                                    <rect key="frame" x="90" y="10" width="253" height="33.5"/>
+                                                    <rect key="frame" x="90" y="10" width="253" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Điện thoại: 08-30547213" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b26-1W-R0n">
-                                                    <rect key="frame" x="90" y="66" width="245" height="14.5"/>
+                                                    <rect key="frame" x="90" y="65" width="245" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="deW-bJ-2uR">
-                                                    <rect key="frame" x="353" y="35.5" width="12" height="20"/>
+                                                    <rect key="frame" x="353" y="35" width="12" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="LyR-E5-dCd"/>
                                                         <constraint firstAttribute="width" constant="12" id="ge4-ZQ-B3E"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ: 629 Trần Hưng Đạo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zag-LV-mnb">
-                                                    <rect key="frame" x="90" y="51.5" width="245" height="14.5"/>
+                                                    <rect key="frame" x="90" y="50" width="245" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -262,6 +262,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="hospitalAddressLable" destination="Zag-LV-mnb" id="cwn-Il-lwa"/>
+                                            <outlet property="hospitalImage" destination="EgU-ro-Z8k" id="4Vj-V6-05r"/>
                                             <outlet property="hospitalNameLable" destination="NoK-PG-Dw6" id="2up-ep-tFo"/>
                                             <outlet property="hospitalPhoneLable" destination="b26-1W-R0n" id="jBp-jo-lvS"/>
                                         </connections>

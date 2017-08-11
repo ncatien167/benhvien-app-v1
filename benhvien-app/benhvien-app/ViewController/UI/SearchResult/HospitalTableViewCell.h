@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *hospitalNameLable;
 @property (weak, nonatomic) IBOutlet UILabel *hospitalAddressLable;
 @property (weak, nonatomic) IBOutlet UILabel *hospitalPhoneLable;
+@property (weak, nonatomic) IBOutlet UIImageView *hospitalImage;
 
 @end

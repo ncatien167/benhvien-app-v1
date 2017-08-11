@@ -11,6 +11,8 @@
 #import "UIColor+Hex.h"
 #import "UIAlertController+Blocks.h"
 #import "ApiRequest.h"
+#import "Hospital.h"
+
 
 @interface BaseViewController : UIViewController
 
@@ -18,6 +20,6 @@
 - (void)showBackButton;
 - (void)showHUD;
 - (void)hideHUD;
-- (void)showMessage:(NSString *)message;
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
 
 @end

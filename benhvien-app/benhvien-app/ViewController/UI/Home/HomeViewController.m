@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "AdvanceSearchViewController.h"
+#import "SearchResultViewController.h"
 
 @interface HomeViewController ()
 
@@ -43,7 +44,7 @@
         if (isValidate) {
             [self searchHospital:hospitalName];
         }else {
-            [self showMessage:message];
+            [self showAlertWithTitle:@"Lỗi" message:message];
         }
     }];
 }
@@ -52,6 +53,19 @@
     [self showHUD];
     [ApiRequest searchHospitalByName:hostpitalName completionBlock:^(ApiResponse *response, NSError *error) {
         [self hideHUD];
+        NSArray *hospitals = [response.data objectForKey:@"hospitals"];
+        if (hospitals.count <= 0) {
+            [self showAlertWithTitle:@"Thông báo" message:@"Không tìm thấy biện viện nào"];
+        }else {
+            self.hospitalDatas = [NSMutableArray new];
+            for (NSDictionary *hospitalData in hospitals) {
+                Hospital *hos = [Hospital initWithRespone:hospitalData];
+                [self.hospitalDatas addObject:hos];
+            }
+            SearchResultViewController *vc = (SearchResultViewController *)[SearchResultViewController instanceFromStoryboardName:@"Home"];
+            vc.hospitals = self.hospitalDatas;
+            [self.navigationController pushViewController:vc animated:true];
+        }
     }];
 }
 

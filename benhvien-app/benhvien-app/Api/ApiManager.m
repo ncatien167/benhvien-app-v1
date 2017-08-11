@@ -94,7 +94,7 @@
     }
 }
 
-#pragma  mark - SUCCESS
+#pragma  mark - FAILURE
 
 - (void)processFailureWithError:(NSError *)error completion:(ApiCompletionBlock)completion {
     if (completion) {
