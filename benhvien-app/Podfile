@@ -10,5 +10,5 @@ target 'benhvien-app' do
   pod 'IQDropDownTextField', '~> 1.1'
   pod 'KASlideShow', '~> 3.0'
   pod 'AFNetworking', '~> 3.0'
-  pod 'SDWebImageFix', '~> 3.7'
+  pod 'SDWebImage'
 end

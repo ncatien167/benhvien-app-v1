@@ -12,7 +12,7 @@
 #import "UIAlertController+Blocks.h"
 #import "ApiRequest.h"
 #import "Hospital.h"
-
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface BaseViewController : UIViewController
 

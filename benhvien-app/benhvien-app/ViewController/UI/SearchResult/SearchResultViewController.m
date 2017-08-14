@@ -55,7 +55,7 @@
     cell.hospitalNameLable.text = hos.name;
     cell.hospitalPhoneLable.text = [NSString stringWithFormat:@"%@",hos.phones];
     cell.hospitalAddressLable.text = hos.street;
-    cell.hospitalImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",hos.images]]]];
+    [cell.hospitalImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",hos.images]]];
     return cell;
 }
 

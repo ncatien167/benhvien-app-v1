@@ -25,7 +25,7 @@
 
 - (void)setUpUserInterface {
     [self showBackButton];
-    self.title = self.hospital.hospitalId;
+    self.title = self.hospital.name;
 }
 
 @end
