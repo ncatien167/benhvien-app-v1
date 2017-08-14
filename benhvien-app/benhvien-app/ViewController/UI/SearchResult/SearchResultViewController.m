@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Kết quả";
+    self.resultTableView.tableFooterView = [UIView new];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,10 +31,17 @@
     [self.resultTableView reloadData];
 }
 
+//- (void)setHospitals:(NSMutableArray *)hospitals {
+//    self.hospitals = hospitals;
+//    [self.resultTableView reloadData];
+//}
+
 - (void)setUpUserInterface {
     [self showBackButton];
     self.resultTableView.estimatedRowHeight = 91.0;
 }
+
+
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource
 
@@ -51,11 +59,8 @@
     if(cell == nil){
         cell = [[HospitalTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
-    Hospital *hos = self.hospitals[indexPath.row];
-    cell.hospitalNameLable.text = hos.name;
-    cell.hospitalPhoneLable.text = [NSString stringWithFormat:@"%@",hos.phones];
-    cell.hospitalAddressLable.text = hos.street;
-    [cell.hospitalImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",hos.images]]];
+    Hospital *hospital = self.hospitals[indexPath.row];
+    [cell setDataForCell:hospital];
     return cell;
 }
 

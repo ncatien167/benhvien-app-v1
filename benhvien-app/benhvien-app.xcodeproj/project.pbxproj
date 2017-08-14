@@ -26,6 +26,8 @@
 		EE790E441F31F04600043139 /* ThumbIamgeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE790E3E1F31F04600043139 /* ThumbIamgeCell.xib */; };
 		EE790E481F31F22300043139 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE790E461F31F22300043139 /* DetailCell.m */; };
 		EE790E491F31F22300043139 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE790E471F31F22300043139 /* DetailCell.xib */; };
+		EEB502FF1F41CFAC00E54AE5 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB502FE1F41CFAC00E54AE5 /* City.m */; };
+		EEB503021F41D46300E54AE5 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = EEB503011F41D46300E54AE5 /* cities.json */; };
 		EECA5F4F1F2B5982005C148F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA5F4E1F2B5982005C148F /* main.m */; };
 		EECA5F521F2B5982005C148F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA5F511F2B5982005C148F /* AppDelegate.m */; };
 		EECA5F5A1F2B5982005C148F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECA5F591F2B5982005C148F /* Assets.xcassets */; };
@@ -84,6 +86,9 @@
 		EE790E451F31F22300043139 /* DetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
 		EE790E461F31F22300043139 /* DetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCell.m; sourceTree = "<group>"; };
 		EE790E471F31F22300043139 /* DetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
+		EEB502FD1F41CFAC00E54AE5 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		EEB502FE1F41CFAC00E54AE5 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		EEB503011F41D46300E54AE5 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		EECA5F4A1F2B5982005C148F /* benhvien-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "benhvien-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECA5F4E1F2B5982005C148F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EECA5F501F2B5982005C148F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -188,6 +193,8 @@
 			children = (
 				EE53B4EF1F2F5B7800AD0AFA /* Hospital.h */,
 				EE53B4F01F2F5B7800AD0AFA /* Hospital.m */,
+				EEB502FD1F41CFAC00E54AE5 /* City.h */,
+				EEB502FE1F41CFAC00E54AE5 /* City.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,6 +234,14 @@
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
+		EEB503001F41D45A00E54AE5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EEB503011F41D46300E54AE5 /* cities.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		EECA5F411F2B5982005C148F = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +263,7 @@
 		EECA5F4C1F2B5982005C148F /* benhvien-app */ = {
 			isa = PBXGroup;
 			children = (
+				EEB503001F41D45A00E54AE5 /* Resources */,
 				EE3E15671F34973D00504F12 /* Api */,
 				EE53B4EB1F2F5B1700AD0AFA /* Model */,
 				EECA5F761F2B5A29005C148F /* StoryBoards */,
@@ -435,6 +451,7 @@
 				EE790E401F31F04600043139 /* AddressCell.xib in Resources */,
 				EE790E441F31F04600043139 /* ThumbIamgeCell.xib in Resources */,
 				EECA5F7A1F2B5A29005C148F /* Login.storyboard in Resources */,
+				EEB503021F41D46300E54AE5 /* cities.json in Resources */,
 				EE790E491F31F22300043139 /* DetailCell.xib in Resources */,
 				EEFD26131F3B27A7002E84B2 /* MapAddressCell.xib in Resources */,
 			);
@@ -539,6 +556,7 @@
 				EE3E156B1F34995500504F12 /* ApiManager.m in Sources */,
 				EECA5F521F2B5982005C148F /* AppDelegate.m in Sources */,
 				EE790E411F31F04600043139 /* HospitalNameCell.m in Sources */,
+				EEB502FF1F41CFAC00E54AE5 /* City.m in Sources */,
 				EECA5F4F1F2B5982005C148F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
