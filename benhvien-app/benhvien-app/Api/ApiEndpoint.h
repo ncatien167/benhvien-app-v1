@@ -12,5 +12,6 @@
 #define BaseURL             @"https://benhvien-app.herokuapp.com/api/v1/"
 #define Login               @"authenticate"
 #define SearchByName        @"hospitals-name"
+#define Cities              @"cities"
 
 #endif /* ApiEndpoint_h */

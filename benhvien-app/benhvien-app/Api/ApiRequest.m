@@ -23,4 +23,8 @@
     [[ApiManager sharedClient] requestApiWithEndpoint:SearchByName method:GET parameters:parameters completion:completion];
 }
 
++ (void)getHospitalCities:(ApiCompletionBlock)completion {
+    [[ApiManager sharedClient] requestApiWithEndpoint:Cities method:GET parameters:nil completion:completion];
+}
+
 @end

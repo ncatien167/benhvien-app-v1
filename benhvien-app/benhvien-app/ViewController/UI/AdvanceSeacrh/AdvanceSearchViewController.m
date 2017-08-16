@@ -47,17 +47,32 @@
     [super didReceiveMemoryWarning];
 }
 
+//- (NSMutableArray *)readCitiesFromFile {
+//    NSMutableArray *cities = [NSMutableArray new];
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"cities" ofType:@"json"];
+//    NSString *myJson = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+//    NSData *data = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+//    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+//    NSArray *cityArray = [jsonDict objectForKey:@"cities"];
+//    for (NSDictionary *cityData in cityArray) {
+//        City *city = [City initWithData:cityData];
+//        [cities addObject:city];
+//    }
+//    return cities;
+//}
+
 - (NSMutableArray *)readCitiesFromFile {
     NSMutableArray *cities = [NSMutableArray new];
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"cities" ofType:@"json"];
-    NSString *myJson = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    NSData *data = [myJson dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    NSArray *cityArray = [jsonDict objectForKey:@"cities"];
-    for (NSDictionary *cityData in cityArray) {
-        City *city = [City initWithData:cityData];
-        [cities addObject:city];
-    }
+    NSString *URLString = @"https://benhvien-app.herokuapp.com/api/v1/cities";
+    NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:URLString]];
+    NSDictionary *jsonCity = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+    [[ApiManager alloc] requestApiWithEndpoint:URLString method:GET parameters:jsonCity completion:^(ApiResponse *response, NSError *error) {
+        NSArray *cityArray = [jsonCity objectForKey:@"cities"];
+        for (NSDictionary *cityData in cityArray) {
+            City *city = [City initWithData:cityData];
+            [cities addObject:city];
+        }
+    }];
     return cities;
 }
 
