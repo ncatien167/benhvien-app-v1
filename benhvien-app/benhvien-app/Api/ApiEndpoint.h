@@ -9,9 +9,12 @@
 #ifndef ApiEndpoint_h
 #define ApiEndpoint_h
 
-#define BaseURL             @"https://benhvien-app.herokuapp.com/api/v1/"
-#define Login               @"authenticate"
-#define SearchByName        @"hospitals-name"
-#define Cities              @"cities"
+#define BaseURL                 @"https://benhvien-app.herokuapp.com/api/v1/"
+#define Login                   @"authenticate"
+#define SearchByName            @"hospitals-name"
+#define Cities                  @"cities"
+#define SearchByDistrictCity    @"hospitals-district-city"
+#define SearchByCity            @"hospitals-city"
+#define HospitalInfo            @"hospitalInfo"
 
 #endif /* ApiEndpoint_h */

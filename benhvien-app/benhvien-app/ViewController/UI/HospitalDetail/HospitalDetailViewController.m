@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self getHospitalInfoWithId:self.hospital.hospitalId];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,6 +26,17 @@
 - (void)setUpUserInterface {
     [self showBackButton];
     self.title = self.hospital.name;
+}
+
+- (void)getHospitalInfoWithId:(NSString *)_id {
+    [ApiRequest getHospitalInfoWithId:_id completion:^(ApiResponse *response, NSError *error) {
+        if (error) {
+            [self showAlertWithTitle:@"Loi" message:error.localizedDescription];
+        }else {
+            NSLog(@"%@",response.originalResponse);
+            NSArray *hospitalInfo = [response.data objectForKey:@"hospitalInfo"];
+        }
+    }];
 }
 
 @end

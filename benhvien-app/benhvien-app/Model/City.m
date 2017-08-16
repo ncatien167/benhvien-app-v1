@@ -19,7 +19,9 @@
 - (void)parseData:(NSDictionary *)data {
     NSString *name = [data objectForKey:@"name"];
     if (name && ![name isKindOfClass:[NSNull class]]) {
-        self.name = name;
+        self.name = [name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];;
+    }else {
+        self.name = @"";
     }
     
     NSArray *districtes = [data objectForKey:@"districtes"];
@@ -27,7 +29,7 @@
         self.district = [NSMutableArray new];
         for (NSDictionary *districtData in districtes) {
             NSString *districtName = [districtData objectForKey:@"name"];
-            [self.district addObject:districtName];
+            [self.district addObject:[districtName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
         }
     }else {
         self.district = [NSMutableArray new];

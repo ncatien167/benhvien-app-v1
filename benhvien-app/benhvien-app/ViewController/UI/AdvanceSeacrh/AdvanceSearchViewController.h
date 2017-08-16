@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet IQDropDownTextField *cityTextField;
 @property (weak, nonatomic) IBOutlet IQDropDownTextField *districtTextField;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
+@property (strong, nonatomic) NSMutableArray *hospitalCitiesArray;
 
 @end

@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Tim kiem";
+    self.title = @"Tìm kiếm";
 }
 
 - (void)didReceiveMemoryWarning {

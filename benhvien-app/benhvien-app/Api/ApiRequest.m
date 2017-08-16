@@ -23,8 +23,27 @@
     [[ApiManager sharedClient] requestApiWithEndpoint:SearchByName method:GET parameters:parameters completion:completion];
 }
 
-+ (void)getHospitalCities:(ApiCompletionBlock)completion {
++ (void)getHospitalWithCompletion:(ApiCompletionBlock)completion {
     [[ApiManager sharedClient] requestApiWithEndpoint:Cities method:GET parameters:nil completion:completion];
+}
+
++ (void)getHospitalWithHospitalCity:(NSString *)name hospitalDistrict:(NSString *)districtes completion:(ApiCompletionBlock)completion {
+    NSDictionary *parameters = @{@"city": name,
+                                 @"district": districtes
+                                 };
+    [[ApiManager sharedClient] requestApiWithEndpoint:SearchByDistrictCity method:GET parameters:parameters completion:completion];
+}
+
++ (void)getHospitalWithHospitalCity:(NSString *)city completion:(ApiCompletionBlock)completion {
+    NSDictionary *parameters = @{@"city": city
+                                 };
+    [[ApiManager sharedClient] requestApiWithEndpoint:SearchByCity method:GET parameters:parameters completion:completion];
+}
+
++ (void)getHospitalInfoWithId:(NSString *)_id completion:(ApiCompletionBlock)completion {
+    NSDictionary *parameters = @{@"id": _id
+                                 };
+    [[ApiManager sharedClient] requestApiWithEndpoint:HospitalInfo method:GET parameters:parameters completion:completion];
 }
 
 @end
