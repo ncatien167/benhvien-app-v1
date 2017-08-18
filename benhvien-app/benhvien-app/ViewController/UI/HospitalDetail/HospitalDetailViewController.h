@@ -8,9 +8,12 @@
 
 #import "BaseViewController.h"
 #import "Hospital.h"
+#import "HLTableView.h"
 
 @interface HospitalDetailViewController : BaseViewController
 
+@property (strong, nonatomic) NSMutableArray *hostpitalArray;
 @property (strong, nonatomic) Hospital *hospital;
+@property(strong, nonatomic) IBOutlet HLTableView *tableView;
 
 @end

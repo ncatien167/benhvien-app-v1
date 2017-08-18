@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HospitalPhoneCell" id="KGk-i7-Jjw" customClass="HospitalPhoneCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone-red-icon" translatesAutoresizingMaskIntoConstraints="NO" id="prx-YD-80e">
+                        <rect key="frame" x="10" y="10" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="F16-xR-Pcv"/>
+                            <constraint firstAttribute="height" constant="15" id="VWF-Lh-HhQ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1n-Oe-cRw">
+                        <rect key="frame" x="35" y="0.0" width="285" height="34.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="ft0-T7-wX0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="S1n-Oe-cRw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7Ev-zA-5ZY"/>
+                    <constraint firstItem="prx-YD-80e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="AhT-iP-jwf"/>
+                    <constraint firstAttribute="bottom" secondItem="S1n-Oe-cRw" secondAttribute="bottom" id="GDC-YO-hWj"/>
+                    <constraint firstAttribute="trailing" secondItem="S1n-Oe-cRw" secondAttribute="trailing" id="Hkn-UK-04a"/>
+                    <constraint firstItem="prx-YD-80e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="PoX-5O-FnW"/>
+                    <constraint firstAttribute="bottom" secondItem="S1n-Oe-cRw" secondAttribute="bottom" id="WPe-3x-heD"/>
+                    <constraint firstAttribute="trailing" secondItem="S1n-Oe-cRw" secondAttribute="trailing" id="ZUi-1G-PCn"/>
+                    <constraint firstItem="S1n-Oe-cRw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rfb-fK-G4c"/>
+                    <constraint firstItem="S1n-Oe-cRw" firstAttribute="leading" secondItem="prx-YD-80e" secondAttribute="trailing" constant="10" id="ssc-rZ-cgz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="phoneImageView" destination="prx-YD-80e" id="MjJ-I4-4Kc"/>
+                <outlet property="phoneLable" destination="S1n-Oe-cRw" id="pRe-Ax-ytb"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="phone-red-icon" width="15" height="15"/>
+    </resources>
+</document>

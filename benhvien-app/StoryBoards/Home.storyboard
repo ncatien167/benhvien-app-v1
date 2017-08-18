@@ -300,12 +300,27 @@
                     <view key="view" contentMode="scaleToFill" id="xNJ-op-EBT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cb1-pE-2R3" customClass="HLTableView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="omZ-AN-4bk" firstAttribute="top" secondItem="Cb1-pE-2R3" secondAttribute="bottom" id="0Fp-ad-BAK"/>
+                            <constraint firstAttribute="trailing" secondItem="Cb1-pE-2R3" secondAttribute="trailing" id="7mZ-w0-DdU"/>
+                            <constraint firstItem="Cb1-pE-2R3" firstAttribute="top" secondItem="xNJ-op-EBT" secondAttribute="top" id="TaU-gb-L58"/>
+                            <constraint firstItem="Cb1-pE-2R3" firstAttribute="leading" secondItem="xNJ-op-EBT" secondAttribute="leading" id="XTd-hG-dGD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Cb1-pE-2R3" id="vxt-UH-jeR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f88-wV-y8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2134" y="92"/>
+            <point key="canvasLocation" x="2133.5999999999999" y="91.304347826086968"/>
         </scene>
     </scenes>
     <resources>
