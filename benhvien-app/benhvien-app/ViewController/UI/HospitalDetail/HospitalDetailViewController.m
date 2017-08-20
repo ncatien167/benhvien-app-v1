@@ -58,7 +58,7 @@
     [objArray addObject:slideShow];
     
     HospitalNameModel *name = [HospitalNameModel new];
-    //name.name =
+    [name setDataForCell:self.hospital.name];
     [objArray addObject:name];
     
     HospitalPhoneModel *phone = [HospitalPhoneModel new];

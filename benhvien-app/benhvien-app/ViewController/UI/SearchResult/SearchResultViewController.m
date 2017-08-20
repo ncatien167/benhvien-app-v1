@@ -31,17 +31,10 @@
     [self.resultTableView reloadData];
 }
 
-//- (void)setHospitals:(NSMutableArray *)hospitals {
-//    self.hospitals = hospitals;
-//    [self.resultTableView reloadData];
-//}
-
 - (void)setUpUserInterface {
     [self showBackButton];
     self.resultTableView.estimatedRowHeight = 91.0;
 }
-
-
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource
 

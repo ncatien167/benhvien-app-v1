@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "benhvien-app/ViewController/UI/AdvanceSeacrh/AdvanceSearchViewController.m"
-            timestampString = "524564288.109487"
+            filePath = "benhvien-app/ViewController/UI/HospitalDetail/HospitalDetailViewController.m"
+            timestampString = "524853281.701635"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "-readCitiesFromFile"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "-createData"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "benhvien-app/ViewController/UI/AdvanceSeacrh/AdvanceSearchViewController.m"
-            timestampString = "524564289.800003"
+            filePath = "benhvien-app/ViewController/UI/HospitalDetail/Models/HospitalNameModel.m"
+            timestampString = "524853281.70176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "-readCitiesFromFile"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "-setDataForCell:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "benhvien-app/ViewController/UI/AdvanceSeacrh/AdvanceSearchViewController.m"
-            timestampString = "524564290.247801"
+            filePath = "benhvien-app/ViewController/UI/HospitalDetail/HospitalDetailViewController.m"
+            timestampString = "524853315.103702"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "-readCitiesFromFile"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-setUpUserInterface"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

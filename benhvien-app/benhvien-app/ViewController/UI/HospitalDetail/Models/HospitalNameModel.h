@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Hospital.h"
 
 @interface HospitalNameModel : NSObject
 
 @property (strong, nonatomic) NSString *name;
+-(void)setDataForCell:(NSString *)name;
 
 @end

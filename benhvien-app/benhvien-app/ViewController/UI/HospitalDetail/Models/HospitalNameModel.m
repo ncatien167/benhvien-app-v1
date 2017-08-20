@@ -10,4 +10,8 @@
 
 @implementation HospitalNameModel
 
+-(void)setDataForCell:(NSString *)name {
+        self.name = name;
+}
+
 @end

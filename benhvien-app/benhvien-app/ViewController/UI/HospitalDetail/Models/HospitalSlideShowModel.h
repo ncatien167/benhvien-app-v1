@@ -7,10 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Hospital.h"
 
 @interface HospitalSlideShowModel : NSObject
-
-+ (instancetype)initWithData:(NSDictionary*)hospital;
-- (void)parseData:(NSDictionary*)data;
 
 @end

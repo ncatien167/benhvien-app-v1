@@ -10,14 +10,4 @@
 
 @implementation HospitalSlideShowModel
 
-+ (instancetype)initWithData:(NSDictionary*)hospital {
-    HospitalSlideShowModel *obj = [[HospitalSlideShowModel alloc] init];
-    [obj parseData:hospital];
-    return obj;
-}
-
-- (void)parseData:(NSDictionary*)data {
-    
-}
-
 @end
