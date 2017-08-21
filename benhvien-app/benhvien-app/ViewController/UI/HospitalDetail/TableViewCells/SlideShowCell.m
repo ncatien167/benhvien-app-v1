@@ -7,18 +7,24 @@
 //
 
 #import "SlideShowCell.h"
+#import "HospitalSlideShowModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation SlideShowCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+- (void)configureCell:(id)model {
+    HospitalSlideShowModel *hospital = (HospitalSlideShowModel *)model;
+    if (hospital) {
+        [self.ImageSlideShow sd_setImageWithURL:[NSURL URLWithString:hospital.image[0]]];
+    }
 }
 
 @end

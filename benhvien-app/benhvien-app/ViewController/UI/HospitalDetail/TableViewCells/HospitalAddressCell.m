@@ -7,18 +7,23 @@
 //
 
 #import "HospitalAddressCell.h"
+#import "HospitalAddressModel.h"
 
 @implementation HospitalAddressCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+- (void)configureCell:(id)model {
+    HospitalAddressModel *hospital = (HospitalAddressModel *)model;
+    if (hospital) {
+        self.AddressLable.text = hospital.address;
+    }
 }
 
 @end

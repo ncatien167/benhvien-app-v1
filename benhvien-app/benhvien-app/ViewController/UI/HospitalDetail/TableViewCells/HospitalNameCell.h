@@ -13,4 +13,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *NameLable;
 
+- (void)configureCell:(id)model;
+
 @end

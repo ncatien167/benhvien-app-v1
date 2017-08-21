@@ -10,4 +10,6 @@
 
 @interface HospitalPhoneModel : NSObject
 
+@property (strong, nonatomic) NSArray *phone;
+
 @end

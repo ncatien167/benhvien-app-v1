@@ -50,6 +50,7 @@
     [self.tableView registerCell:[HospitalDescriptionCell class] forModel:[HospitalDescriptionModel class]];
     [self.tableView registerCell:[HospitalLocationCell class] forModel:[HospitalLocationModel class]];
     [self.tableView addItems:[self createData]];
+    
 }
 
 - (NSArray *)createData {
@@ -58,7 +59,7 @@
     [objArray addObject:slideShow];
     
     HospitalNameModel *name = [HospitalNameModel new];
-    [name setDataForCell:self.hospital.name];
+
     [objArray addObject:name];
     
     HospitalPhoneModel *phone = [HospitalPhoneModel new];
@@ -72,6 +73,7 @@
     
     HospitalLocationModel *location = [HospitalLocationModel new];
     [objArray addObject:location];
+    [self getHospitalInfoWithId:self.hospital.hospitalId];
     return objArray;
 }
 
@@ -80,13 +82,14 @@
         if (error) {
             [self showAlertWithTitle:@"Loi" message:error.localizedDescription];
         }else {
-            NSLog(@"%@",response.originalResponse);
+            NSDictionary *hospitalData = [response.data objectForKey:@"hospitalInfo"];
+            Hospital *hospital = [Hospital initWithRespone:hospitalData];
+            HospitalNameCell *name = [[HospitalNameCell alloc] init];
+            [name configureCell:hospital];
             
-            NSArray *hospitalInfo = [response.data objectForKey:@"hospitalInfo"];
+            
         }
     }];
 }
-
-
 
 @end

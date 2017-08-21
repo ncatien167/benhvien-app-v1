@@ -7,18 +7,23 @@
 //
 
 #import "HospitalPhoneCell.h"
+#import "HospitalPhoneModel.h"
 
 @implementation HospitalPhoneCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+- (void)configureCell:(id)model {
+    HospitalPhoneModel *hospital = (HospitalPhoneModel *)model;
+    if (hospital) {
+        self.phoneLable.text = hospital.phone[0];
+    }
 }
 
 @end

@@ -10,4 +10,6 @@
 
 @interface HospitalDescriptionModel : NSObject
 
+@property (strong, nonatomic) NSString *description;
+
 @end

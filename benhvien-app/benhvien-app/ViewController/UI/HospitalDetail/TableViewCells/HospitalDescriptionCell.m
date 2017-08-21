@@ -7,18 +7,23 @@
 //
 
 #import "HospitalDescriptionCell.h"
+#import "HospitalDescriptionModel.h"
 
 @implementation HospitalDescriptionCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+- (void)configureCell:(id)model {
+    HospitalDescriptionModel *hospital = (HospitalDescriptionModel *)model;
+    if (hospital) {
+        self.imformationLable.text = hospital.description;
+    }
 }
 
 @end
