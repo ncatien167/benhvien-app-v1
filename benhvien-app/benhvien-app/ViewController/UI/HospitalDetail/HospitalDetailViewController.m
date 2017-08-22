@@ -32,7 +32,6 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,32 +48,33 @@
     [self.tableView registerCell:[HospitalAddressCell class] forModel:[HospitalAddressModel class]];
     [self.tableView registerCell:[HospitalDescriptionCell class] forModel:[HospitalDescriptionModel class]];
     [self.tableView registerCell:[HospitalLocationCell class] forModel:[HospitalLocationModel class]];
-    [self.tableView addItems:[self createData]];
-    
 }
 
-- (NSArray *)createData {
+- (void)setupCellData:(Hospital *)hospital {
     NSMutableArray *objArray = [NSMutableArray new];
     HospitalSlideShowModel *slideShow = [HospitalSlideShowModel new];
+    slideShow.images = hospital.images;
     [objArray addObject:slideShow];
     
     HospitalNameModel *name = [HospitalNameModel new];
-
+    name.name = hospital.name;
     [objArray addObject:name];
     
     HospitalPhoneModel *phone = [HospitalPhoneModel new];
+    phone.phone = hospital.phones;
     [objArray addObject:phone];
     
     HospitalAddressModel *address = [HospitalAddressModel new];
+    address.address = hospital.street;
     [objArray addObject:address];
     
-    HospitalDescriptionModel *description = [HospitalDescriptionModel new];
-    [objArray addObject:description];
+    HospitalDescriptionModel *descriptionModel = [HospitalDescriptionModel new];
+    descriptionModel.descriptionModel = hospital.hospitalDescription;
+    [objArray addObject:descriptionModel];
     
     HospitalLocationModel *location = [HospitalLocationModel new];
     [objArray addObject:location];
-    [self getHospitalInfoWithId:self.hospital.hospitalId];
-    return objArray;
+    [self.tableView addItems:objArray];
 }
 
 - (void)getHospitalInfoWithId:(NSString *)_id {
@@ -84,10 +84,7 @@
         }else {
             NSDictionary *hospitalData = [response.data objectForKey:@"hospitalInfo"];
             Hospital *hospital = [Hospital initWithRespone:hospitalData];
-            HospitalNameCell *name = [[HospitalNameCell alloc] init];
-            [name configureCell:hospital];
-            
-            
+            [self setupCellData:hospital];
         }
     }];
 }

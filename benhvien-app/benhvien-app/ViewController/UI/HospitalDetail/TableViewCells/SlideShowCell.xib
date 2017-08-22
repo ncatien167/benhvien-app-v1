@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,28 +15,28 @@
             <rect key="frame" x="0.0" y="0.0" width="359" height="300"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="359" height="299"/>
+                <rect key="frame" x="0.0" y="0.0" width="359" height="299.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vwn-HI-gP0">
-                        <rect key="frame" x="0.0" y="0.0" width="359" height="299.5"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTA-MD-SvN" customClass="KASlideShow">
+                        <rect key="frame" x="0.0" y="0.0" width="359" height="300"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="300" id="v5D-b0-syO"/>
+                            <constraint firstAttribute="height" constant="300" id="tGW-ku-qBq"/>
                         </constraints>
-                    </imageView>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="vwn-HI-gP0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8aj-i8-nzY"/>
-                    <constraint firstAttribute="trailing" secondItem="vwn-HI-gP0" secondAttribute="trailing" id="BnS-Rw-PRD"/>
-                    <constraint firstItem="vwn-HI-gP0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Clu-Vf-2bj"/>
-                    <constraint firstAttribute="bottom" secondItem="vwn-HI-gP0" secondAttribute="bottom" id="Ze2-LW-cWO"/>
+                    <constraint firstAttribute="trailing" secondItem="XTA-MD-SvN" secondAttribute="trailing" id="anF-nf-UGg"/>
+                    <constraint firstAttribute="bottom" secondItem="XTA-MD-SvN" secondAttribute="bottom" constant="-0.5" id="j5Z-cB-K46"/>
+                    <constraint firstItem="XTA-MD-SvN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wef-Df-QCP"/>
+                    <constraint firstItem="XTA-MD-SvN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zDD-jF-fgw"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="ImageSlideShow" destination="vwn-HI-gP0" id="RXV-1K-52T"/>
+                <outlet property="slideshow" destination="XTA-MD-SvN" id="QEW-4k-CsH"/>
             </connections>
-            <point key="canvasLocation" x="-239" y="-88"/>
+            <point key="canvasLocation" x="-239.5" y="-88"/>
         </tableViewCell>
     </objects>
 </document>

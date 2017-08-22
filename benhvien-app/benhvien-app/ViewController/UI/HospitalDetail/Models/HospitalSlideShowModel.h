@@ -11,6 +11,6 @@
 
 @interface HospitalSlideShowModel : NSObject
 
-@property (strong,nonatomic) NSArray *image;
+@property (strong,nonatomic) NSArray *images;
 
 @end

@@ -8,7 +8,13 @@
 
 #import "SlideShowCell.h"
 #import "HospitalSlideShowModel.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+
+@interface SlideShowCell()<KASlideShowDataSource, KASlideShowDelegate>
+{
+    NSMutableArray * _datasource;
+}
+
+@end
 
 @implementation SlideShowCell
 
@@ -21,10 +27,39 @@
 }
 
 - (void)configureCell:(id)model {
-    HospitalSlideShowModel *hospital = (HospitalSlideShowModel *)model;
-    if (hospital) {
-        [self.ImageSlideShow sd_setImageWithURL:[NSURL URLWithString:hospital.image[0]]];
+    HospitalSlideShowModel *thumbModel = (HospitalSlideShowModel *)model;
+    if (thumbModel) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self setupSlideShow:thumbModel.images];
+        });
     }
+}
+
+- (void)setupSlideShow:(NSArray *)images {
+    _datasource = [NSMutableArray new];
+    for (NSString *url in images) {
+        [_datasource addObject:[NSURL URLWithString:url]];
+    }
+    _slideshow.datasource = self;
+    _slideshow.delegate = self;
+    [_slideshow setDelay:2];
+    [_slideshow setTransitionDuration:0.5];
+    [_slideshow setTransitionType:KASlideShowTransitionSlideHorizontal];
+    [_slideshow setImagesContentMode:UIViewContentModeScaleAspectFill];
+    [_slideshow addGesture:KASlideShowGestureTap];
+    [_slideshow start];
+}
+
+#pragma mark - KASlideShow datasource
+
+- (NSObject *)slideShow:(KASlideShow *)slideShow objectAtIndex:(NSUInteger)index
+{
+    return _datasource[index];
+}
+
+- (NSUInteger)slideShowImagesNumber:(KASlideShow *)slideShow
+{
+    return _datasource.count;
 }
 
 @end

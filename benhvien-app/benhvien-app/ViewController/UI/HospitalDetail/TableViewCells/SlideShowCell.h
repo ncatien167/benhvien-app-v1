@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "HLTableViewCell.h"
+#import "KASlideShow.h"
 
 @interface SlideShowCell : HLTableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *ImageSlideShow;
+@property (weak, nonatomic) IBOutlet KASlideShow *slideshow;
 
 @end
