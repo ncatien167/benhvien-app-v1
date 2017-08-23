@@ -42,6 +42,7 @@
     [self showBackButton];
     self.title = self.hospital.name;
     self.tableView.estimatedRowHeight = 140.0;
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView registerCell:[SlideShowCell class] forModel:[HospitalSlideShowModel class]];
     [self.tableView registerCell:[HospitalNameCell class] forModel:[HospitalNameModel class]];
     [self.tableView registerCell:[HospitalPhoneCell class] forModel:[HospitalPhoneModel class]];
