@@ -9,6 +9,8 @@
 #ifndef ApiEndpoint_h
 #define ApiEndpoint_h
 
+#define GoogleApiKey            @"AIzaSyCk77_rbSukbCgHqzUW4mWT2D92JhnuacE"
+
 #define BaseURL                 @"https://benhvien-app.herokuapp.com/api/v1/"
 #define Login                   @"authenticate"
 #define SearchByName            @"hospitals-name"

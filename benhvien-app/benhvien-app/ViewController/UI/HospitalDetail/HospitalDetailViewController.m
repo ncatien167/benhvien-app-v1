@@ -20,6 +20,7 @@
 #import "HospitalSlideShowModel.h"
 #import "HospitalDescriptionModel.h"
 
+
 @interface HospitalDetailViewController ()
 
 @end
@@ -42,11 +43,11 @@
     [self showBackButton];
     self.title = self.hospital.name;
     self.tableView.estimatedRowHeight = 140.0;
-//    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView registerCell:[SlideShowCell class] forModel:[HospitalSlideShowModel class]];
     [self.tableView registerCell:[HospitalNameCell class] forModel:[HospitalNameModel class]];
-    [self.tableView registerCell:[HospitalPhoneCell class] forModel:[HospitalPhoneModel class]];
     [self.tableView registerCell:[HospitalAddressCell class] forModel:[HospitalAddressModel class]];
+    [self.tableView registerCell:[HospitalPhoneCell class] forModel:[HospitalPhoneModel class]];
     [self.tableView registerCell:[HospitalDescriptionCell class] forModel:[HospitalDescriptionModel class]];
     [self.tableView registerCell:[HospitalLocationCell class] forModel:[HospitalLocationModel class]];
 }
@@ -61,20 +62,24 @@
     name.name = hospital.name;
     [objArray addObject:name];
     
-    HospitalPhoneModel *phone = [HospitalPhoneModel new];
-    phone.phone = hospital.phones;
-    [objArray addObject:phone];
-    
     HospitalAddressModel *address = [HospitalAddressModel new];
     address.address = hospital.street;
     [objArray addObject:address];
+    
+    HospitalPhoneModel *phone = [HospitalPhoneModel new];
+    phone.phone = hospital.phones;
+    [objArray addObject:phone];
     
     HospitalDescriptionModel *descriptionModel = [HospitalDescriptionModel new];
     descriptionModel.descriptionModel = hospital.hospitalDescription;
     [objArray addObject:descriptionModel];
     
     HospitalLocationModel *location = [HospitalLocationModel new];
+    location.latitude = hospital.latitude;
+    location.longitude = hospital.longitude;
+    location.name = hospital.name;
     [objArray addObject:location];
+    
     [self.tableView addItems:objArray];
 }
 

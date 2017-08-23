@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "HLTableViewCell.h"
+#import "HospitalLocationModel.h"
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface HospitalLocationCell : HLTableViewCell
-@property (weak, nonatomic) IBOutlet UIView *locationVIew;
+
+@property (weak, nonatomic) IBOutlet GMSMapView *locationView;
 
 @end

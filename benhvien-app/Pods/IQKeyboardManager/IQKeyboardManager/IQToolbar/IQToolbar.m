@@ -1,5 +1,5 @@
 //
-// IQToolbar.m
+//  IQToolbar.m
 // https://github.com/hackiftekhar/IQKeyboardManager
 // Copyright (c) 2013-16 Iftekhar Qurashi.
 //
@@ -210,6 +210,15 @@
         else    return NSOrderedSame;
     }];
     
+    static Class IQUIToolbarTextButtonClass = Nil;
+    static Class IQUIToolbarButtonClass = Nil;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        IQUIToolbarTextButtonClass = NSClassFromString(@"UIToolbarTextButton");
+        IQUIToolbarButtonClass = NSClassFromString(@"UIToolbarButton");
+    });
+    
     for (UIView *barButtonItemView in subviews)
     {
         if (isTitleBarButtonFound == YES)
@@ -221,8 +230,8 @@
         {
             isTitleBarButtonFound = YES;
         }
-        //If it's UIToolbarButton or UIToolbarTextButton (which actually UIBarButtonItem)
-        else if ([barButtonItemView isKindOfClass:[UIControl class]])
+        else if ([barButtonItemView isKindOfClass:IQUIToolbarTextButtonClass] ||
+            [barButtonItemView isKindOfClass:IQUIToolbarButtonClass])
         {
             leftRect = barButtonItemView.frame;
         }

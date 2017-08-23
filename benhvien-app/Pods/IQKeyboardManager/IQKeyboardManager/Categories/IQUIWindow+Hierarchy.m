@@ -1,5 +1,5 @@
 //
-// IQUIWindow+Hierarchy.m
+//  UIWindow+Hierarchy.m
 // https://github.com/hackiftekhar/IQKeyboardManager
 // Copyright (c) 2013-16 Iftekhar Qurashi.
 //

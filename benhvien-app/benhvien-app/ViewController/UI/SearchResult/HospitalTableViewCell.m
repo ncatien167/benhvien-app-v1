@@ -18,6 +18,12 @@
     [super setSelected:selected animated:animated];
 }
 
+- (void)setupBorder {
+    self.hospitalImage.layer.cornerRadius = 4.0;
+    self.hospitalImage.layer.borderWidth = 0.5;
+    self.hospitalImage.clipsToBounds = true;
+}
+
 -(void)setDataForCell:(id)data {
     Hospital *hospital = (Hospital *)data;
     if (hospital) {
@@ -30,6 +36,7 @@
         }
         self.hospitalAddressLable.text = [NSString stringWithFormat:@"Địa chỉ: %@",hospital.street];
     }
+    [self setupBorder];
 }
 
 @end

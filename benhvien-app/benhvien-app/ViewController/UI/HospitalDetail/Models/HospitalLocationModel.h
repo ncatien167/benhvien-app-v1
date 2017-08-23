@@ -12,5 +12,6 @@
 
 @property (nonatomic) double latitude;
 @property (nonatomic) double longitude;
+@property (strong, nonatomic) NSString *name;
 
 @end

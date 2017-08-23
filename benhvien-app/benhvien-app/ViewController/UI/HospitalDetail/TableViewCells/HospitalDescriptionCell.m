@@ -22,7 +22,7 @@
 - (void)configureCell:(id)model {
     HospitalDescriptionModel *hospital = (HospitalDescriptionModel *)model;
     if (hospital) {
-        self.imformationLable.text = hospital.description;
+        self.imformationLable.text = hospital.descriptionModel;
     }
 }
 

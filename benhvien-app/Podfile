@@ -13,4 +13,5 @@ target 'benhvien-app' do
   pod 'SDWebImage'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'OCGoogleDirectionsAPI'
 end

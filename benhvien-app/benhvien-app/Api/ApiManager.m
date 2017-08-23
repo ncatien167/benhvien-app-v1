@@ -90,6 +90,7 @@
     ApiResponse *res = [ApiResponse initWithRespone:responseObject];
     if (completion) {
         completion(res, nil);
+        NSLog(@"%@",responseObject);
     }
 }
 
