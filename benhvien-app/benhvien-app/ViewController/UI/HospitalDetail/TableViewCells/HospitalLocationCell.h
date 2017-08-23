@@ -10,5 +10,6 @@
 #import "HLTableViewCell.h"
 
 @interface HospitalLocationCell : HLTableViewCell
+@property (weak, nonatomic) IBOutlet UIView *locationVIew;
 
 @end
