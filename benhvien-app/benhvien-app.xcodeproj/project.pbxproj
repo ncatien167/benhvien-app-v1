@@ -55,6 +55,7 @@
 		EECBA3F41F471688009BCF02 /* HospitalLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECBA3F21F471688009BCF02 /* HospitalLocationCell.xib */; };
 		EEF432FE1F2B6F1A00BE2E40 /* AdvanceSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF432FD1F2B6F1A00BE2E40 /* AdvanceSearchViewController.m */; };
 		EEF433021F2B6F2300BE2E40 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF433011F2B6F2300BE2E40 /* HomeViewController.m */; };
+		FF1675B81F4F334C00E922A5 /* HospitalDirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1675B71F4F334C00E922A5 /* HospitalDirectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +146,8 @@
 		EEF432FD1F2B6F1A00BE2E40 /* AdvanceSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvanceSearchViewController.m; sourceTree = "<group>"; };
 		EEF433001F2B6F2300BE2E40 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		EEF433011F2B6F2300BE2E40 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		FF1675B61F4F334C00E922A5 /* HospitalDirectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HospitalDirectionViewController.h; sourceTree = "<group>"; };
+		FF1675B71F4F334C00E922A5 /* HospitalDirectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HospitalDirectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +386,7 @@
 		EECA5F831F2B5A4F005C148F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FF1675B51F4F331C00E922A5 /* HospitalDirection */,
 				EE53B4E71F2F59E300AD0AFA /* HospitalDetail */,
 				EE53B4E31F2F59DB00AD0AFA /* SearchResult */,
 				EEF432FB1F2B6F1A00BE2E40 /* AdvanceSeacrh */,
@@ -426,6 +430,15 @@
 				EEF433011F2B6F2300BE2E40 /* HomeViewController.m */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		FF1675B51F4F331C00E922A5 /* HospitalDirection */ = {
+			isa = PBXGroup;
+			children = (
+				FF1675B61F4F334C00E922A5 /* HospitalDirectionViewController.h */,
+				FF1675B71F4F334C00E922A5 /* HospitalDirectionViewController.m */,
+			);
+			path = HospitalDirection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -595,6 +608,7 @@
 				EECA5F751F2B5A14005C148F /* UIViewController+Storyboard.m in Sources */,
 				EE3E156E1F34996C00504F12 /* ApiRequest.m in Sources */,
 				EECA5F741F2B5A14005C148F /* UIView+Nib.m in Sources */,
+				FF1675B81F4F334C00E922A5 /* HospitalDirectionViewController.m in Sources */,
 				EEF433021F2B6F2300BE2E40 /* HomeViewController.m in Sources */,
 				EECA5F721F2B5A14005C148F /* UIColor+Hex.m in Sources */,
 				EE53B4FE1F2F6B2400AD0AFA /* HLTableViewSection.m in Sources */,

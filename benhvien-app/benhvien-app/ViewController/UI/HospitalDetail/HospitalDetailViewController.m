@@ -7,6 +7,7 @@
 //
 
 #import "HospitalDetailViewController.h"
+#import "HospitalDirectionViewController.h"
 #import "SlideShowCell.h"
 #import "HospitalNameCell.h"
 #import "HospitalPhoneCell.h"
@@ -39,6 +40,16 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)showDirectionButton {
+    UIBarButtonItem *goToDirection = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"direction-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(goToHospitalDirection)];
+    self.navigationItem.rightBarButtonItem = goToDirection;
+}
+
+- (void)goToHospitalDirection {
+    HospitalDirectionViewController *direction = (HospitalDirectionViewController *)[HospitalDirectionViewController instanceFromStoryboardName:@"Home"];
+    [self.navigationController pushViewController:direction animated:true];
+}
+
 - (void)setUpUserInterface {
     [self showBackButton];
     self.title = self.hospital.name;
@@ -50,6 +61,7 @@
     [self.tableView registerCell:[HospitalPhoneCell class] forModel:[HospitalPhoneModel class]];
     [self.tableView registerCell:[HospitalDescriptionCell class] forModel:[HospitalDescriptionModel class]];
     [self.tableView registerCell:[HospitalLocationCell class] forModel:[HospitalLocationModel class]];
+    [self showDirectionButton];
 }
 
 - (void)setupCellData:(Hospital *)hospital {

@@ -10,6 +10,7 @@
 #import "HomeViewController.h"
 #import "UIViewController+Storyboard.h"
 #import "BaseNavigationController.h"
+#import <OCGoogleDirectionsAPI/OCGoogleDirectionsAPI.h>
 @import GoogleMaps;
 
 @interface AppDelegate ()
@@ -22,6 +23,7 @@
     [self setupApplicationTheme];
     [self setupHomeScreen];
     [GMSServices provideAPIKey:GoogleApiKey];
+    [OCDirectionsAPIClient provideAPIKey:GoogleApiKey];
     return YES;
 }
 
