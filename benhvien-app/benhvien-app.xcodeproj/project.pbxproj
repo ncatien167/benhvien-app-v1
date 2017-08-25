@@ -18,6 +18,7 @@
 		EE53B4FC1F2F6B2400AD0AFA /* HLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE53B4F71F2F6B2400AD0AFA /* HLTableView.m */; };
 		EE53B4FD1F2F6B2400AD0AFA /* HLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE53B4F91F2F6B2400AD0AFA /* HLTableViewCell.m */; };
 		EE53B4FE1F2F6B2400AD0AFA /* HLTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = EE53B4FB1F2F6B2400AD0AFA /* HLTableViewSection.m */; };
+		EE93730C1F504F6E00379151 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE93730B1F504F6E00379151 /* MapKit.framework */; };
 		EEB502FF1F41CFAC00E54AE5 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB502FE1F41CFAC00E54AE5 /* City.m */; };
 		EEB503021F41D46300E54AE5 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = EEB503011F41D46300E54AE5 /* cities.json */; };
 		EECA5F4F1F2B5982005C148F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA5F4E1F2B5982005C148F /* main.m */; };
@@ -83,6 +84,8 @@
 		EE53B4F91F2F6B2400AD0AFA /* HLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTableViewCell.m; sourceTree = "<group>"; };
 		EE53B4FA1F2F6B2400AD0AFA /* HLTableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTableViewSection.h; sourceTree = "<group>"; };
 		EE53B4FB1F2F6B2400AD0AFA /* HLTableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTableViewSection.m; sourceTree = "<group>"; };
+		EE93730A1F50406700379151 /* MyLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyLocation.gpx; sourceTree = "<group>"; };
+		EE93730B1F504F6E00379151 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EEB502FD1F41CFAC00E54AE5 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
 		EEB502FE1F41CFAC00E54AE5 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 		EEB503011F41D46300E54AE5 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
@@ -155,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE93730C1F504F6E00379151 /* MapKit.framework in Frameworks */,
 				523D17485BD251881E585E32 /* Pods_benhvien_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +178,7 @@
 		E7ECC8A7F03E294F552F2827 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE93730B1F504F6E00379151 /* MapKit.framework */,
 				C28EE9788498379070232178 /* Pods_benhvien_app.framework */,
 			);
 			name = Frameworks;
@@ -262,6 +267,14 @@
 				EECBA3F21F471688009BCF02 /* HospitalLocationCell.xib */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		EE9373091F50405800379151 /* MyLocation */ = {
+			isa = PBXGroup;
+			children = (
+				EE93730A1F50406700379151 /* MyLocation.gpx */,
+			);
+			path = MyLocation;
 			sourceTree = "<group>";
 		};
 		EEB503001F41D45A00E54AE5 /* Resources */ = {
@@ -437,6 +450,7 @@
 			children = (
 				FF1675B61F4F334C00E922A5 /* HospitalDirectionViewController.h */,
 				FF1675B71F4F334C00E922A5 /* HospitalDirectionViewController.m */,
+				EE9373091F50405800379151 /* MyLocation */,
 			);
 			path = HospitalDirection;
 			sourceTree = "<group>";

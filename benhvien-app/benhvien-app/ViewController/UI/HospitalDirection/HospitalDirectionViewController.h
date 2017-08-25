@@ -7,7 +7,12 @@
 //
 
 #import "BaseViewController.h"
+#import "Hospital.h"
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface HospitalDirectionViewController : BaseViewController
+    
+@property (strong, nonatomic) Hospital *hospital;
+@property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 
 @end

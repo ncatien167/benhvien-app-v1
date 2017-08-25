@@ -47,6 +47,7 @@
 
 - (void)goToHospitalDirection {
     HospitalDirectionViewController *direction = (HospitalDirectionViewController *)[HospitalDirectionViewController instanceFromStoryboardName:@"Home"];
+    direction.hospital = self.hospital;
     [self.navigationController pushViewController:direction animated:true];
 }
 
@@ -61,6 +62,7 @@
     [self.tableView registerCell:[HospitalPhoneCell class] forModel:[HospitalPhoneModel class]];
     [self.tableView registerCell:[HospitalDescriptionCell class] forModel:[HospitalDescriptionModel class]];
     [self.tableView registerCell:[HospitalLocationCell class] forModel:[HospitalLocationModel class]];
+    self.tableView.hidden = true;
     [self showDirectionButton];
 }
 
@@ -96,13 +98,14 @@
 }
 
 - (void)getHospitalInfoWithId:(NSString *)_id {
+    self.tableView.hidden = false;
     [ApiRequest getHospitalInfoWithId:_id completion:^(ApiResponse *response, NSError *error) {
         if (error) {
             [self showAlertWithTitle:@"Loi" message:error.localizedDescription];
         }else {
             NSDictionary *hospitalData = [response.data objectForKey:@"hospitalInfo"];
-            Hospital *hospital = [Hospital initWithRespone:hospitalData];
-            [self setupCellData:hospital];
+            self.hospital = [Hospital initWithRespone:hospitalData];
+            [self setupCellData:self.hospital];
         }
     }];
 }

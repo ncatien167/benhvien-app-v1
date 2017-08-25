@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -208,7 +207,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZAf-kp-JC7" id="SBY-Q5-jVa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EgU-ro-Z8k">
@@ -219,7 +218,7 @@
                                                         <constraint firstAttribute="height" constant="70" id="tA7-IP-r4A"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bệnh viện chấn thương chỉnh hình Tp Hồ Chí Minh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoK-PG-Dw6">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bệnh viện chấn thương chỉnh hình Tp Hồ Chí Minh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoK-PG-Dw6">
                                                     <rect key="frame" x="90" y="10" width="253" height="33.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.32549019607843138" green="0.33333333333333331" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
@@ -311,7 +310,7 @@
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beu-LU-8sM">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="50"/>
                                         <color key="backgroundColor" red="0.48627450980392156" green="0.50196078431372548" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="187.5" id="jSj-GG-boo"/>
@@ -321,7 +320,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTq-lp-7Z8">
-                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
+                                        <rect key="frame" x="188" y="0.0" width="187" height="50"/>
                                         <color key="backgroundColor" red="0.16862745098039217" green="0.55294117647058827" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="187.5" id="guv-qe-4Ky"/>
@@ -374,12 +373,27 @@
                     <view key="view" contentMode="scaleToFill" id="Gnc-ib-C0J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVo-g8-j5d" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YVo-g8-j5d" firstAttribute="leading" secondItem="Gnc-ib-C0J" secondAttribute="leading" id="FTG-Hv-8J2"/>
+                            <constraint firstItem="R4X-kq-n9O" firstAttribute="top" secondItem="YVo-g8-j5d" secondAttribute="bottom" id="Fkw-x3-WFk"/>
+                            <constraint firstAttribute="trailing" secondItem="YVo-g8-j5d" secondAttribute="trailing" id="qlD-H1-6ys"/>
+                            <constraint firstItem="YVo-g8-j5d" firstAttribute="top" secondItem="Gnc-ib-C0J" secondAttribute="top" id="yfM-ro-K4q"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="YVo-g8-j5d" id="wKk-Xq-njE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JTW-aw-eyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2865" y="91"/>
+            <point key="canvasLocation" x="2864.8000000000002" y="90.404797601199405"/>
         </scene>
     </scenes>
     <resources>
