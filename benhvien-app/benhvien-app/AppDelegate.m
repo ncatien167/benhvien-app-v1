@@ -9,7 +9,9 @@
 #import "AppDelegate.h"
 #import "HomeViewController.h"
 #import "UIViewController+Storyboard.h"
+#import "AppInfoViewController.h"
 #import "BaseNavigationController.h"
+#import "BaseTapBarController.h"
 #import <OCGoogleDirectionsAPI/OCGoogleDirectionsAPI.h>
 @import GoogleMaps;
 
@@ -29,9 +31,15 @@
 
 - (void)setupHomeScreen {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    HomeViewController *vc = (HomeViewController *)[HomeViewController instanceFromStoryboardName:@"Home"];
-    BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vc];
-    self.window.rootViewController = nav;
+    HomeViewController *homeViewController = (HomeViewController *)[HomeViewController instanceFromStoryboardName:@"Home"];
+    BaseNavigationController *homeNav = [[BaseNavigationController alloc] initWithRootViewController:homeViewController];
+    
+    AppInfoViewController *appInfoViewController = (AppInfoViewController *)[AppInfoViewController instanceFromStoryboardName:@"Home"];
+    BaseNavigationController *appInfoNav = [[BaseNavigationController alloc] initWithRootViewController:appInfoViewController];
+    
+    BaseTapBarController *tab = [BaseTapBarController new];
+    tab.viewControllers = @[homeNav, appInfoNav];
+    self.window.rootViewController = tab;
     [self.window makeKeyAndVisible];
 }
 

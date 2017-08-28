@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="v99-Hd-ump" customClass="MenuView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side-menu-bg" translatesAutoresizingMaskIntoConstraints="NO" id="am0-bs-Vta">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y9N-6O-VCJ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="am0-bs-Vta" firstAttribute="top" secondItem="v99-Hd-ump" secondAttribute="top" id="5X6-cU-J7D"/>
+                <constraint firstItem="y9N-6O-VCJ" firstAttribute="top" secondItem="v99-Hd-ump" secondAttribute="top" id="6pV-K4-dlU"/>
+                <constraint firstItem="am0-bs-Vta" firstAttribute="leading" secondItem="v99-Hd-ump" secondAttribute="leading" id="AXC-JY-btM"/>
+                <constraint firstItem="y9N-6O-VCJ" firstAttribute="leading" secondItem="v99-Hd-ump" secondAttribute="leading" id="LuR-hB-dMf"/>
+                <constraint firstAttribute="trailing" secondItem="y9N-6O-VCJ" secondAttribute="trailing" id="Uxe-pz-wAV"/>
+                <constraint firstAttribute="bottom" secondItem="y9N-6O-VCJ" secondAttribute="bottom" id="qln-eY-HRb"/>
+                <constraint firstAttribute="bottom" secondItem="am0-bs-Vta" secondAttribute="bottom" id="s7K-AR-AAa"/>
+                <constraint firstAttribute="trailing" secondItem="am0-bs-Vta" secondAttribute="trailing" id="uFl-EQ-rEY"/>
+            </constraints>
+            <connections>
+                <outlet property="menuTableView" destination="y9N-6O-VCJ" id="UJk-WK-VJt"/>
+            </connections>
+            <point key="canvasLocation" x="-280.5" y="148.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="side-menu-bg" width="375" height="667"/>
+    </resources>
+</document>

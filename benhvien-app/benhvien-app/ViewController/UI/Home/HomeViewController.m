@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "AdvanceSearchViewController.h"
 #import "SearchResultViewController.h"
+#import "BaseTapBarController.h"
 
 @interface HomeViewController ()
 
@@ -47,6 +48,13 @@
             [self showAlertWithTitle:@"Lỗi" message:message];
         }
     }];
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    BaseTapBarController *tab = (BaseTapBarController *)self.tabBarController;
+    if (tab.menuDisplayed) {
+        [tab animatedMenu:!tab.menuDisplayed];
+    }
 }
 
 - (void)searchHospital:(NSString *)hostpitalName {
