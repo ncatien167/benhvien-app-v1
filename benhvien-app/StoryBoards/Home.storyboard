@@ -409,11 +409,11 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ria-oD-EVL">
                                 <rect key="frame" x="20" y="30" width="335" height="301"/>
-                                <mutableString key="text">Ứng dụng bệnh viện cho điện thoại IOS giúp bạn tom kiếm thing tin và đường đi đến một bệnh viện nhanh chóng và dễ dàng hơn bao giờ hết. Sau khi tom thấy một banh viện tốt nhất bạn có thể nhanh chóng liên hệ đến bệnh viện đó ngay trong ứng dụng để đặt chổ khám chữa bệnh.  1) Bao gồm nhiêu bênh viện và phòng kaám tại Việt Nam.
+                                <string key="text">Ứng dụng bệnh viện cho điện thoại IOS giúp bạn tom kiếm thing tin và đường đi đến một bệnh viện nhanh chóng và dễ dàng hơn bao giờ hết. Sau khi tom thấy một banh viện tốt nhất bạn có thể nhanh chóng liên hệ đến bệnh viện đó ngay trong ứng dụng để đặt chổ khám chữa bệnh.  1) Bao gồm nhiêu bênh viện và phòng kaám tại Việt Nam.
 2) Chức năng tìm kiếm beng viện dễ sử dụng và hiệu quả cao.
 3) Hiển thị thing tin chi tiết của cdc cơ sở chum chữa bệnh.
 4) Hiển thị đường đi một cásh rõ ràng, gijp bạn đến cáo cơ sở khám chữa bệnh một cách nhanh nhất.
-5) Dữ liệu được cập nhập thường xuyên, bạn cũng có thể đóng gup bằng cách thêm vào cáo bệnh viện mới.</mutableString>
+5) Dữ liệu được cập nhập thường xuyên, bạn cũng có thể đóng gup bằng cách thêm vào cáo bệnh viện mới.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.25490196079999999" green="0.26274509800000001" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -426,6 +426,7 @@
                             <constraint firstItem="ria-oD-EVL" firstAttribute="top" secondItem="0QG-Gv-awm" secondAttribute="top" constant="30" id="tGK-Gr-FV4"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ctz-0A-02Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) NSArray *menuItems;
 @property (weak, nonatomic) IBOutlet UITableView *menuTableView;
+@property void (^onDidSelectedItemIndex)(NSInteger index);
+
 - (void)setupMenuView;
 
 @end

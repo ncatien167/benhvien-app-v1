@@ -17,21 +17,31 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side-menu-bg" translatesAutoresizingMaskIntoConstraints="NO" id="am0-bs-Vta">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y9N-6O-VCJ">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y9N-6O-VCJ" customClass="HLTableView">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKB-ye-rTl">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="gBD-qW-Pcf"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="am0-bs-Vta" firstAttribute="top" secondItem="v99-Hd-ump" secondAttribute="top" id="5X6-cU-J7D"/>
-                <constraint firstItem="y9N-6O-VCJ" firstAttribute="top" secondItem="v99-Hd-ump" secondAttribute="top" id="6pV-K4-dlU"/>
+                <constraint firstItem="y9N-6O-VCJ" firstAttribute="top" secondItem="v99-Hd-ump" secondAttribute="top" constant="64" id="6pV-K4-dlU"/>
                 <constraint firstItem="am0-bs-Vta" firstAttribute="leading" secondItem="v99-Hd-ump" secondAttribute="leading" id="AXC-JY-btM"/>
+                <constraint firstItem="vKB-ye-rTl" firstAttribute="top" secondItem="v99-Hd-ump" secondAttribute="top" id="JQo-sw-ImJ"/>
                 <constraint firstItem="y9N-6O-VCJ" firstAttribute="leading" secondItem="v99-Hd-ump" secondAttribute="leading" id="LuR-hB-dMf"/>
                 <constraint firstAttribute="trailing" secondItem="y9N-6O-VCJ" secondAttribute="trailing" id="Uxe-pz-wAV"/>
+                <constraint firstItem="vKB-ye-rTl" firstAttribute="leading" secondItem="v99-Hd-ump" secondAttribute="leading" id="hMu-AC-vp0"/>
                 <constraint firstAttribute="bottom" secondItem="y9N-6O-VCJ" secondAttribute="bottom" id="qln-eY-HRb"/>
                 <constraint firstAttribute="bottom" secondItem="am0-bs-Vta" secondAttribute="bottom" id="s7K-AR-AAa"/>
                 <constraint firstAttribute="trailing" secondItem="am0-bs-Vta" secondAttribute="trailing" id="uFl-EQ-rEY"/>
+                <constraint firstAttribute="trailing" secondItem="vKB-ye-rTl" secondAttribute="trailing" id="zW5-OP-Nih"/>
             </constraints>
             <connections>
                 <outlet property="menuTableView" destination="y9N-6O-VCJ" id="UJk-WK-VJt"/>

@@ -16,7 +16,44 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search-menu-icon" translatesAutoresizingMaskIntoConstraints="NO" id="SJg-dB-Cdz">
+                        <rect key="frame" x="20" y="15" width="30" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="5bc-G4-aC5"/>
+                            <constraint firstAttribute="height" constant="30" id="ZHc-7l-lQB"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNu-nd-HaB">
+                        <rect key="frame" x="65" y="0.0" width="240" height="60"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="59.5" id="QLg-IC-xb9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="aNu-nd-HaB" firstAttribute="leading" secondItem="SJg-dB-Cdz" secondAttribute="trailing" constant="15" id="08Z-S4-OgT"/>
+                    <constraint firstItem="SJg-dB-Cdz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DJB-lm-W2o"/>
+                    <constraint firstItem="SJg-dB-Cdz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="G0g-tI-CAF"/>
+                    <constraint firstItem="aNu-nd-HaB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="J8m-q5-SBa"/>
+                    <constraint firstAttribute="bottom" secondItem="aNu-nd-HaB" secondAttribute="bottom" id="JEE-FU-LkB"/>
+                    <constraint firstAttribute="trailing" secondItem="aNu-nd-HaB" secondAttribute="trailing" constant="15" id="eJJ-oR-Ic1"/>
+                </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="imageViewIcon" destination="SJg-dB-Cdz" id="MvN-Zv-Fqt"/>
+                <outlet property="titleLable" destination="aNu-nd-HaB" id="3gJ-bh-NYq"/>
+            </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="search-menu-icon" width="30" height="31"/>
+    </resources>
 </document>
