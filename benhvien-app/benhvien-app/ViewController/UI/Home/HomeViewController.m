@@ -54,6 +54,7 @@
     BaseTapBarController *tab = (BaseTapBarController *)self.tabBarController;
     if (tab.menuDisplayed) {
         [tab animatedMenu:!tab.menuDisplayed];
+        [self.searchTextField setUserInteractionEnabled:YES];
     }
 }
 
@@ -88,6 +89,12 @@
 - (IBAction)advanceSearchButtonPressed:(id)sender {
     AdvanceSearchViewController *vc = (AdvanceSearchViewController *)[AdvanceSearchViewController instanceFromStoryboardName:@"Home"];
     [self.navigationController pushViewController:vc animated:true];
+}
+
+- (void)menuButtonPressed:(id)sender {
+    [self.searchTextField endEditing:NO];
+    [self.searchTextField setUserInteractionEnabled:NO];
+    [super menuButtonPressed:self];
 }
 
 @end
