@@ -11,7 +11,7 @@
         <!--Home View Controller-->
         <scene sceneID="oFr-ae-ie1">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="0Wc-sa-CwK" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="0Wc-sa-CwK" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="epN-kK-mKh"/>
                         <viewControllerLayoutGuide type="bottom" id="7GR-g4-fAY"/>
@@ -68,6 +68,7 @@
                             <constraint firstItem="AD2-9G-df6" firstAttribute="leading" secondItem="jWf-xR-tjE" secondAttribute="leading" constant="20" id="rgt-38-U7D"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="advanceSearchButton" destination="zNm-aH-sdh" id="5br-Sj-TeH"/>
                         <outlet property="searchButton" destination="Jtb-0U-QAi" id="mYA-by-d5f"/>
@@ -76,12 +77,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUB-wR-bc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71" y="92"/>
+            <point key="canvasLocation" x="-71.200000000000003" y="91.304347826086968"/>
         </scene>
         <!--Advance Search View Controller-->
         <scene sceneID="vRG-6M-5cn">
             <objects>
-                <viewController storyboardIdentifier="AdvanceSearchViewController" id="e3E-wU-nCO" customClass="AdvanceSearchViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdvanceSearchViewController" automaticallyAdjustsScrollViewInsets="NO" id="e3E-wU-nCO" customClass="AdvanceSearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sgq-gx-G9K"/>
                         <viewControllerLayoutGuide type="bottom" id="zbn-lD-InA"/>
@@ -175,6 +176,7 @@
                             <constraint firstItem="bEj-ED-aYG" firstAttribute="top" secondItem="LK8-gd-47V" secondAttribute="bottom" constant="40" id="zGW-Dl-iOp"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="cityContainerView" destination="XzN-nW-dXw" id="KZF-01-NTs"/>
                         <outlet property="cityTextField" destination="GMj-6a-mI2" id="Vy4-SE-Onu"/>
@@ -190,7 +192,7 @@
         <!--Search Result View Controller-->
         <scene sceneID="vix-tK-pjb">
             <objects>
-                <viewController storyboardIdentifier="SearchResultViewController" id="PRu-X4-fTQ" customClass="SearchResultViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchResultViewController" automaticallyAdjustsScrollViewInsets="NO" id="PRu-X4-fTQ" customClass="SearchResultViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YtE-u4-37Y"/>
                         <viewControllerLayoutGuide type="bottom" id="r1A-hf-IhG"/>
@@ -282,6 +284,7 @@
                             <constraint firstAttribute="trailing" secondItem="j1j-9i-Flm" secondAttribute="trailing" id="z8C-TZ-A8t"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="resultTableView" destination="j1j-9i-Flm" id="X2V-mv-dqK"/>
                     </connections>
@@ -293,7 +296,7 @@
         <!--Hospital Detail View Controller-->
         <scene sceneID="d2Q-4N-Vfj">
             <objects>
-                <viewController storyboardIdentifier="HospitalDetailViewController" id="xQq-ZN-m9Q" customClass="HospitalDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HospitalDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="xQq-ZN-m9Q" customClass="HospitalDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="db8-WF-AmI"/>
                         <viewControllerLayoutGuide type="bottom" id="omZ-AN-4bk"/>
@@ -354,6 +357,7 @@
                             <constraint firstAttribute="trailing" secondItem="fUR-7Y-jwA" secondAttribute="trailing" id="pMy-Rm-2Eb"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="tableView" destination="Cb1-pE-2R3" id="vxt-UH-jeR"/>
                     </connections>
@@ -365,7 +369,7 @@
         <!--Hospital Direction View Controller-->
         <scene sceneID="9dh-qr-iwq">
             <objects>
-                <viewController storyboardIdentifier="HospitalDirectionViewController" id="lCw-ee-sd6" customClass="HospitalDirectionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HospitalDirectionViewController" automaticallyAdjustsScrollViewInsets="NO" id="lCw-ee-sd6" customClass="HospitalDirectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IIM-i8-nXg"/>
                         <viewControllerLayoutGuide type="bottom" id="R4X-kq-n9O"/>
@@ -398,7 +402,7 @@
         <!--App Info View Controller-->
         <scene sceneID="BLI-Qs-hHL">
             <objects>
-                <viewController storyboardIdentifier="AppInfoViewController" id="Ne9-zC-qhs" customClass="AppInfoViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AppInfoViewController" automaticallyAdjustsScrollViewInsets="NO" id="Ne9-zC-qhs" customClass="AppInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RAq-cx-P4D"/>
                         <viewControllerLayoutGuide type="bottom" id="vF0-Y2-EQV"/>

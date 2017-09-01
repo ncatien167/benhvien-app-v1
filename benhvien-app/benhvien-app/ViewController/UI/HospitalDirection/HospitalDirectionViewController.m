@@ -68,12 +68,6 @@
             }
             if (polyline) {
                 polyline.map = self.mapView;
-                
-                GMSMarker *marker1 = [[GMSMarker alloc] init];
-                marker1.position = CLLocationCoordinate2DMake(self.hospital.latitude, self.hospital.longitude);
-                marker1.title = @"My location";
-                marker1.appearAnimation = kGMSMarkerAnimationPop;
-                marker1.map = self.mapView;
             }
         });
     }];

@@ -15,4 +15,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *advanceSearchButton;
 @property (strong, nonatomic) NSMutableArray *hospitalDatas;
 
+
 @end
