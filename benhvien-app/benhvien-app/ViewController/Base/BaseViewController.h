@@ -13,6 +13,7 @@
 #import "ApiRequest.h"
 #import "Hospital.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "BaseNavigationController.h"
 
 @interface BaseViewController : UIViewController
 

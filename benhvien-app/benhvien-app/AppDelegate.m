@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HomeViewController.h"
+#import "FirstLoginViewController.h"
 #import "UIViewController+Storyboard.h"
 #import "AppInfoViewController.h"
 #import "BaseNavigationController.h"
@@ -23,10 +24,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupApplicationTheme];
-    [self setupHomeScreen];
+    [self setupFirstLoginScreen];
     [GMSServices provideAPIKey:GoogleApiKey];
     [OCDirectionsAPIClient provideAPIKey:GoogleApiKey];
     return YES;
+}
+
+- (void)setupFirstLoginScreen {
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    FirstLoginViewController *firstLoginViewController = (FirstLoginViewController *)[FirstLoginViewController instanceFromStoryboardName:@"Login"];
+    self.window.rootViewController = firstLoginViewController;
+    [self.window makeKeyAndVisible];
 }
 
 - (void)setupHomeScreen {

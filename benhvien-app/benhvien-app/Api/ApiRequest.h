@@ -19,5 +19,6 @@
 + (void)getHospitalWithHospitalCity:(NSString *)name hospitalDistrict:(NSString *)districtes completion:(ApiCompletionBlock)completion;
 + (void)getHospitalWithHospitalCity:(NSString *)city completion:(ApiCompletionBlock)completion;
 + (void)getHospitalInfoWithId:(NSString *)_id completion:(ApiCompletionBlock)completion;
++ (void)registerUser:(NSString *)email password:(NSString *)password city:(NSString *)city fullName:(NSString *)fullName completion:completion;
 
 @end

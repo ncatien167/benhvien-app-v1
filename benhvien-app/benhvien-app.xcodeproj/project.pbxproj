@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		523D17485BD251881E585E32 /* Pods_benhvien_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28EE9788498379070232178 /* Pods_benhvien_app.framework */; };
+		EE129FAB1F6023E1006A81DE /* FirstLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE129FAA1F6023E1006A81DE /* FirstLoginViewController.m */; };
+		EE129FAF1F6027CF006A81DE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE129FAE1F6027CF006A81DE /* LoginViewController.m */; };
 		EE3E156B1F34995500504F12 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3E156A1F34995500504F12 /* ApiManager.m */; };
 		EE3E156E1F34996C00504F12 /* ApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3E156D1F34996C00504F12 /* ApiRequest.m */; };
 		EE3E15711F34998300504F12 /* ApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3E15701F34998300504F12 /* ApiResponse.m */; };
@@ -68,6 +70,10 @@
 		3C13043832A85DFFDC6E4F13 /* Pods-benhvien-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benhvien-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-benhvien-app/Pods-benhvien-app.debug.xcconfig"; sourceTree = "<group>"; };
 		6F755BCB4EEC04742E3DE08F /* Pods-benhvien-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-benhvien-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-benhvien-app/Pods-benhvien-app.release.xcconfig"; sourceTree = "<group>"; };
 		C28EE9788498379070232178 /* Pods_benhvien_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_benhvien_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE129FA91F6023E1006A81DE /* FirstLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLoginViewController.h; sourceTree = "<group>"; };
+		EE129FAA1F6023E1006A81DE /* FirstLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLoginViewController.m; sourceTree = "<group>"; };
+		EE129FAD1F6027CF006A81DE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		EE129FAE1F6027CF006A81DE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		EE3E15681F34976900504F12 /* ApiEndpoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiEndpoint.h; sourceTree = "<group>"; };
 		EE3E15691F34995500504F12 /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		EE3E156A1F34995500504F12 /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
@@ -195,6 +201,24 @@
 				C28EE9788498379070232178 /* Pods_benhvien_app.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE129FA81F6023C9006A81DE /* FirstLogin */ = {
+			isa = PBXGroup;
+			children = (
+				EE129FA91F6023E1006A81DE /* FirstLoginViewController.h */,
+				EE129FAA1F6023E1006A81DE /* FirstLoginViewController.m */,
+			);
+			path = FirstLogin;
+			sourceTree = "<group>";
+		};
+		EE129FAC1F6027C0006A81DE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EE129FAD1F6027CF006A81DE /* LoginViewController.h */,
+				EE129FAE1F6027CF006A81DE /* LoginViewController.m */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		EE3E15671F34973D00504F12 /* Api */ = {
@@ -435,6 +459,8 @@
 		EECA5F831F2B5A4F005C148F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EE129FAC1F6027C0006A81DE /* Login */,
+				EE129FA81F6023C9006A81DE /* FirstLogin */,
 				EE5B64031F543DFB00E8BA13 /* AppInfo */,
 				FF1675B51F4F331C00E922A5 /* HospitalDirection */,
 				EE53B4E71F2F59E300AD0AFA /* HospitalDetail */,
@@ -668,6 +694,7 @@
 				EE5B64091F5444F900E8BA13 /* AppInfoViewController.m in Sources */,
 				EE53B4FE1F2F6B2400AD0AFA /* HLTableViewSection.m in Sources */,
 				EECBA3D61F4715C4009BCF02 /* HospitalLocationModel.m in Sources */,
+				EE129FAF1F6027CF006A81DE /* LoginViewController.m in Sources */,
 				EECA5F8A1F2B5A4F005C148F /* BaseNavigationController.m in Sources */,
 				EE53B4F41F2F5CBF00AD0AFA /* HospitalTableViewCell.m in Sources */,
 				EE53B4E61F2F59DB00AD0AFA /* SearchResultViewController.m in Sources */,
@@ -686,6 +713,7 @@
 				EECBA3CA1F471562009BCF02 /* HospitalNameModel.m in Sources */,
 				EEB502FF1F41CFAC00E54AE5 /* City.m in Sources */,
 				EECA5F4F1F2B5982005C148F /* main.m in Sources */,
+				EE129FAB1F6023E1006A81DE /* FirstLoginViewController.m in Sources */,
 				EECBA3D01F4715A4009BCF02 /* HospitalPhoneModel.m in Sources */,
 				EECBA3CD1F47157B009BCF02 /* HospitalAddressModel.m in Sources */,
 			);

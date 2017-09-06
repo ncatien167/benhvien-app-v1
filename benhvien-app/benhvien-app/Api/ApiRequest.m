@@ -46,4 +46,13 @@
     [[ApiManager sharedClient] requestApiWithEndpoint:HospitalInfo method:GET parameters:parameters completion:completion];
 }
 
++ (void)registerUser:(NSString *)email password:(NSString *)password city:(NSString *)city fullName:(NSString *)fullName completion:completion {
+    NSDictionary *paramaters = @{@"email": email,
+                                 @"password": password,
+                                 @"role": @"email",
+                                 @"city": city,
+                                 @"fullName": fullName};
+    [[ApiManager sharedClient] requestApiWithEndpoint:Register method:POST parameters:paramaters completion:completion];
+}
+
 @end

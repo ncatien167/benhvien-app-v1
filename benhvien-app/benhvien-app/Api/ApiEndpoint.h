@@ -18,5 +18,6 @@
 #define SearchByDistrictCity    @"hospitals-district-city"
 #define SearchByCity            @"hospitals-city"
 #define HospitalInfo            @"hospitalInfo"
+#define Register                @"register"
 
 #endif /* ApiEndpoint_h */
