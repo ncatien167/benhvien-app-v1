@@ -10,4 +10,15 @@
 
 @interface LoginViewController : BaseViewController
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *signInUpSegment;
+@property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *cityTextField;
+@property (weak, nonatomic) IBOutlet UIView *signInContentView;
+@property (weak, nonatomic) IBOutlet UIView *signUpContentView;
+
+- (IBAction)segmentPressed:(UISegmentedControl *)sender;
+
+
 @end
