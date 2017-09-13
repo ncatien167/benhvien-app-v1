@@ -14,6 +14,7 @@
 #import "BaseNavigationController.h"
 #import "BaseTapBarController.h"
 #import <OCGoogleDirectionsAPI/OCGoogleDirectionsAPI.h>
+#import <HNKGooglePlacesAutocomplete/HNKGooglePlacesAutocomplete.h>
 @import GoogleMaps;
 
 @interface AppDelegate ()
@@ -25,9 +26,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupApplicationTheme];
     [self setupFirstLoginScreen];
+    [self setupApplicationData];
+    return YES;
+}
+
+- (void)setupApplicationData {
     [GMSServices provideAPIKey:GoogleApiKey];
     [OCDirectionsAPIClient provideAPIKey:GoogleApiKey];
-    return YES;
+    [HNKGooglePlacesAutocompleteQuery setupSharedQueryWithAPIKey:GoogleApiKey];
 }
 
 - (void)setupFirstLoginScreen {

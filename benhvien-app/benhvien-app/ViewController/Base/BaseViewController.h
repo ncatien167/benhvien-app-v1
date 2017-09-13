@@ -14,6 +14,7 @@
 #import "Hospital.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "BaseNavigationController.h"
+#import "BaseTapBarController.h"
 
 @interface BaseViewController : UIViewController
 
@@ -22,6 +23,7 @@
 - (void)showHUD;
 - (void)hideHUD;
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
+- (void)showAlertWithTitle;
 - (IBAction)menuButtonPressed:(id)sender;
 
 @end

@@ -17,8 +17,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *cityTextField;
 @property (weak, nonatomic) IBOutlet UIView *signInContentView;
 @property (weak, nonatomic) IBOutlet UIView *signUpContentView;
+@property (weak, nonatomic) IBOutlet UITextField *enterUsernameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *enterPasswordTextField;
+@property (strong, nonatomic) NSString *places;
 
 - (IBAction)segmentPressed:(UISegmentedControl *)sender;
+
 
 
 @end

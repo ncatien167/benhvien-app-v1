@@ -7,7 +7,6 @@
 //
 
 #import "BaseViewController.h"
-#import "BaseTapBarController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 
 @interface BaseViewController ()
@@ -15,6 +14,10 @@
 @end
 
 @implementation BaseViewController
+
+- (void)dealloc {
+    NSLog(@"[%@] dealloc",[self class]);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -62,6 +65,16 @@
                                          message:message
                                cancelButtonTitle:@"OK"
                           destructiveButtonTitle:nil
+                               otherButtonTitles:nil
+                                        tapBlock:nil];
+}
+
+- (void)showAlertWithTitle {
+    [UIAlertController showAlertInViewController:self
+                                       withTitle:@"Xác nhận"
+                                         message:@"Bạn có chắc chắn muốn huỷ bỏ?"
+                               cancelButtonTitle:@"Cancel"
+                          destructiveButtonTitle:@"YES"
                                otherButtonTitles:nil
                                         tapBlock:nil];
 }

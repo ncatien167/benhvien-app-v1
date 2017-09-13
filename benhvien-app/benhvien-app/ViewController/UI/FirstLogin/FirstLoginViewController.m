@@ -17,17 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self showHUD];
-    [ApiRequest registerUser:@"test2@gmail.com" password:@"111111" city:@"Ho Chi Minh" fullName:@"Anh Tien" completion:^(ApiResponse *response, NSError *error) {
-        [self hideHUD];
-    }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
-
 
 - (IBAction)emailButtonPressed:(id)sender {
     LoginViewController *loginViewController = (LoginViewController *)[LoginViewController instanceFromStoryboardName:@"Login"];
