@@ -12,6 +12,6 @@
 @interface PlacesViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *contentTableView;
-@property (nonatomic, strong) NSString *(^GetPlaces)(void);
+@property (nonatomic) void(^onGetPlacesCity)(NSString *city, UIViewController *viewController);
 
 @end

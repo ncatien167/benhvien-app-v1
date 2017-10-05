@@ -15,11 +15,15 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "BaseNavigationController.h"
 #import "BaseTapBarController.h"
+#import "UserDataManager.h"
+#import "Constants.h"
 
 @interface BaseViewController : UIViewController
 
 - (void)showMenuButton;
 - (void)showBackButton;
+- (void)showCancelButton;
+- (void)showDoneButton;
 - (void)showHUD;
 - (void)hideHUD;
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;

@@ -29,7 +29,6 @@
 		EEB502FF1F41CFAC00E54AE5 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB502FE1F41CFAC00E54AE5 /* City.m */; };
 		EEB503021F41D46300E54AE5 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = EEB503011F41D46300E54AE5 /* cities.json */; };
 		EECA5F4F1F2B5982005C148F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA5F4E1F2B5982005C148F /* main.m */; };
-		EECA5F521F2B5982005C148F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA5F511F2B5982005C148F /* AppDelegate.m */; };
 		EECA5F5A1F2B5982005C148F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECA5F591F2B5982005C148F /* Assets.xcassets */; };
 		EECA5F5D1F2B5982005C148F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECA5F5B1F2B5982005C148F /* LaunchScreen.storyboard */; };
 		EECA5F711F2B5A14005C148F /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA5F681F2B5A14005C148F /* UIAlertController+Blocks.m */; };
@@ -61,13 +60,16 @@
 		EEF432FE1F2B6F1A00BE2E40 /* AdvanceSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF432FD1F2B6F1A00BE2E40 /* AdvanceSearchViewController.m */; };
 		EEF433021F2B6F2300BE2E40 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF433011F2B6F2300BE2E40 /* HomeViewController.m */; };
 		FF1675B81F4F334C00E922A5 /* HospitalDirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1675B71F4F334C00E922A5 /* HospitalDirectionViewController.m */; };
+		FF9082F11F6BF8E0008B3A30 /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9082F01F6BF8E0008B3A30 /* UserDataManager.m */; };
 		FFAFF7B21F66797A004F90E0 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAFF7B11F66797A004F90E0 /* ForgetPasswordViewController.m */; };
 		FFAFF7B61F667B24004F90E0 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAFF7B51F667B24004F90E0 /* ChangePasswordViewController.m */; };
 		FFBDB23E1F66AD6A00B53F63 /* PlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBDB23D1F66AD6A00B53F63 /* PlacesViewController.m */; };
 		FFBDB2411F66AD7F00B53F63 /* PlacesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBDB2401F66AD7F00B53F63 /* PlacesTableViewCell.m */; };
+		FFD2B8601F825D9900A7F9E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD2B85F1F825C1E00A7F9E2 /* AppDelegate.m */; };
 		FFF0BD761F62B79400E815DF /* FirstLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF0BD731F62B73A00E815DF /* FirstLogin.storyboard */; };
 		FFF0BD771F62B79700E815DF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF0BD741F62B73A00E815DF /* Home.storyboard */; };
 		FFF0BD781F62B79B00E815DF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF0BD751F62B73A00E815DF /* Login.storyboard */; };
+		FFFDDFA61F7003EC007A3AC1 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFDDFA51F7003EC007A3AC1 /* AccountViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,8 +116,6 @@
 		EEB503011F41D46300E54AE5 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		EECA5F4A1F2B5982005C148F /* benhvien-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "benhvien-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECA5F4E1F2B5982005C148F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EECA5F501F2B5982005C148F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		EECA5F511F2B5982005C148F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EECA5F591F2B5982005C148F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EECA5F5C1F2B5982005C148F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EECA5F5E1F2B5982005C148F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -171,6 +171,9 @@
 		EEF433011F2B6F2300BE2E40 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		FF1675B61F4F334C00E922A5 /* HospitalDirectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HospitalDirectionViewController.h; sourceTree = "<group>"; };
 		FF1675B71F4F334C00E922A5 /* HospitalDirectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HospitalDirectionViewController.m; sourceTree = "<group>"; };
+		FF9082EF1F6BF8E0008B3A30 /* UserDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDataManager.h; sourceTree = "<group>"; };
+		FF9082F01F6BF8E0008B3A30 /* UserDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDataManager.m; sourceTree = "<group>"; };
+		FF9082F31F6BFAA5008B3A30 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		FFAFF7B01F66797A004F90E0 /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
 		FFAFF7B11F66797A004F90E0 /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
 		FFAFF7B41F667B24004F90E0 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
@@ -179,9 +182,13 @@
 		FFBDB23D1F66AD6A00B53F63 /* PlacesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacesViewController.m; sourceTree = "<group>"; };
 		FFBDB23F1F66AD7F00B53F63 /* PlacesTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlacesTableViewCell.h; sourceTree = "<group>"; };
 		FFBDB2401F66AD7F00B53F63 /* PlacesTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacesTableViewCell.m; sourceTree = "<group>"; };
+		FFD2B85E1F825C1E00A7F9E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FFD2B85F1F825C1E00A7F9E2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FFF0BD731F62B73A00E815DF /* FirstLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstLogin.storyboard; sourceTree = "<group>"; };
 		FFF0BD741F62B73A00E815DF /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		FFF0BD751F62B73A00E815DF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		FFFDDFA41F7003EC007A3AC1 /* AccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		FFFDDFA51F7003EC007A3AC1 /* AccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +384,8 @@
 		EECA5F4C1F2B5982005C148F /* benhvien-app */ = {
 			isa = PBXGroup;
 			children = (
+				FF9082F21F6BFA95008B3A30 /* Constants */,
+				FF9082EE1F6BF8A9008B3A30 /* Managers */,
 				FFF0BD721F62B73A00E815DF /* StoryBoards */,
 				EE5B63F81F54369B00E8BA13 /* Views */,
 				EEB503001F41D45A00E54AE5 /* Resources */,
@@ -384,8 +393,7 @@
 				EE53B4EB1F2F5B1700AD0AFA /* Model */,
 				EECA5F7B1F2B5A4F005C148F /* ViewController */,
 				EECA5F641F2B5A14005C148F /* Libraries */,
-				EECA5F501F2B5982005C148F /* AppDelegate.h */,
-				EECA5F511F2B5982005C148F /* AppDelegate.m */,
+				FFD2B85D1F825C1E00A7F9E2 /* AppDelegate */,
 				EECA5F591F2B5982005C148F /* Assets.xcassets */,
 				EECA5F5B1F2B5982005C148F /* LaunchScreen.storyboard */,
 				EECA5F5E1F2B5982005C148F /* Info.plist */,
@@ -448,12 +456,12 @@
 		EECA5F7C1F2B5A4F005C148F /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				EECA5F811F2B5A4F005C148F /* BaseViewController.h */,
+				EECA5F821F2B5A4F005C148F /* BaseViewController.m */,
 				EECA5F7D1F2B5A4F005C148F /* BaseNavigationController.h */,
 				EECA5F7E1F2B5A4F005C148F /* BaseNavigationController.m */,
 				EECA5F7F1F2B5A4F005C148F /* BaseTapBarController.h */,
 				EECA5F801F2B5A4F005C148F /* BaseTapBarController.m */,
-				EECA5F811F2B5A4F005C148F /* BaseViewController.h */,
-				EECA5F821F2B5A4F005C148F /* BaseViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -461,9 +469,10 @@
 		EECA5F831F2B5A4F005C148F /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				FFBDB23B1F66AD5C00B53F63 /* Places */,
 				FFAFF7B31F667B18004F90E0 /* ChangePassword */,
 				FFAFF7AF1F66796C004F90E0 /* ForgetPassword */,
+				FFFDDFA31F7003CE007A3AC1 /* Account */,
+				FFBDB23B1F66AD5C00B53F63 /* Places */,
 				EE129FAC1F6027C0006A81DE /* Login */,
 				EE129FA81F6023C9006A81DE /* FirstLogin */,
 				EE5B64031F543DFB00E8BA13 /* AppInfo */,
@@ -523,6 +532,23 @@
 			path = HospitalDirection;
 			sourceTree = "<group>";
 		};
+		FF9082EE1F6BF8A9008B3A30 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FF9082EF1F6BF8E0008B3A30 /* UserDataManager.h */,
+				FF9082F01F6BF8E0008B3A30 /* UserDataManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FF9082F21F6BFA95008B3A30 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FF9082F31F6BFAA5008B3A30 /* Constants.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		FFAFF7AF1F66796C004F90E0 /* ForgetPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,6 +578,15 @@
 			path = Places;
 			sourceTree = "<group>";
 		};
+		FFD2B85D1F825C1E00A7F9E2 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				FFD2B85E1F825C1E00A7F9E2 /* AppDelegate.h */,
+				FFD2B85F1F825C1E00A7F9E2 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		FFF0BD721F62B73A00E815DF /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,6 +595,15 @@
 				FFF0BD751F62B73A00E815DF /* Login.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		FFFDDFA31F7003CE007A3AC1 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				FFFDDFA41F7003EC007A3AC1 /* AccountViewController.h */,
+				FFFDDFA51F7003EC007A3AC1 /* AccountViewController.m */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -596,6 +640,7 @@
 				TargetAttributes = {
 					EECA5F491F2B5982005C148F = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = VXMF85XCJC;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -725,6 +770,7 @@
 				EECA5F711F2B5A14005C148F /* UIAlertController+Blocks.m in Sources */,
 				EECBA3EE1F471678009BCF02 /* HospitalDescriptionCell.m in Sources */,
 				EE53B4FC1F2F6B2400AD0AFA /* HLTableView.m in Sources */,
+				FF9082F11F6BF8E0008B3A30 /* UserDataManager.m in Sources */,
 				EE5B63FB1F5436AF00E8BA13 /* MenuView.m in Sources */,
 				EECBA3F31F471688009BCF02 /* HospitalLocationCell.m in Sources */,
 				EECA5F8C1F2B5A4F005C148F /* BaseViewController.m in Sources */,
@@ -750,12 +796,13 @@
 				FFAFF7B21F66797A004F90E0 /* ForgetPasswordViewController.m in Sources */,
 				EECBA3C71F4714B9009BCF02 /* HospitalSlideShowModel.m in Sources */,
 				EE53B4F11F2F5B7800AD0AFA /* Hospital.m in Sources */,
+				FFFDDFA61F7003EC007A3AC1 /* AccountViewController.m in Sources */,
+				FFD2B8601F825D9900A7F9E2 /* AppDelegate.m in Sources */,
 				EECBA3DF1F47163F009BCF02 /* HospitalNameCell.m in Sources */,
 				EE5B64011F54398D00E8BA13 /* MenuViewCell.m in Sources */,
 				EECA5F731F2B5A14005C148F /* UITextField+Padding.m in Sources */,
 				EECBA3D31F4715B6009BCF02 /* HospitalDescriptionModel.m in Sources */,
 				EE3E156B1F34995500504F12 /* ApiManager.m in Sources */,
-				EECA5F521F2B5982005C148F /* AppDelegate.m in Sources */,
 				FFBDB23E1F66AD6A00B53F63 /* PlacesViewController.m in Sources */,
 				EECBA3E41F47164F009BCF02 /* HospitalAddressCell.m in Sources */,
 				EECBA3CA1F471562009BCF02 /* HospitalNameModel.m in Sources */,
@@ -874,6 +921,7 @@
 			baseConfigurationReference = 3C13043832A85DFFDC6E4F13 /* Pods-benhvien-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VXMF85XCJC;
 				INFOPLIST_FILE = "benhvien-app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -887,6 +935,7 @@
 			baseConfigurationReference = 6F755BCB4EEC04742E3DE08F /* Pods-benhvien-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VXMF85XCJC;
 				INFOPLIST_FILE = "benhvien-app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

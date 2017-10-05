@@ -8,10 +8,13 @@
 
 #import "MenuView.h"
 #import "MenuViewCell.h"
-
+#import "UserDataManager.h"
+#import "AccountViewController.h"
 
 @interface MenuView() <UITableViewDelegate, UITableViewDataSource>
-
+{
+    BOOL *_isSelected;
+}
 @end
 
 @implementation MenuView
@@ -22,7 +25,10 @@
     self.menuTableView.dataSource = self;
     self.menuTableView.delegate = self;
     self.menuTableView.estimatedRowHeight = 60.0;
+    self.menuTableView.rowHeight = UITableViewAutomaticDimension;
     [self.menuTableView registerNib:[UINib nibWithNibName:@"MenuViewCell" bundle:nil] forCellReuseIdentifier:@"MenuViewCell"];
+    self.menuTableView.tableFooterView = [UIView new];
+    self.userNameLable.text = [UserDataManager shareClient].fullname;
 }
 
 - (void)setMenuItems:(NSArray *)menuItems {
@@ -49,7 +55,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.onDidSelectedItemIndex) {
-        self.onDidSelectedItemIndex(indexPath.row);
+        self.onDidSelectedItemIndex(indexPath.row + 1);
+    }
+}
+
+- (IBAction)goToAccountViewController:(id)sender {
+    if (self.onDidSelectedButtonAccount) {
+        self.onDidSelectedButtonAccount();
     }
 }
 

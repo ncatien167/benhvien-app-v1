@@ -10,6 +10,7 @@
 #import "HospitalDetailViewController.h"
 #import "Hospital.h"
 #import "HospitalTableViewCell.h"
+#import <SVPullToRefresh/SVPullToRefresh.h>
 
 @interface SearchResultViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -19,8 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Kết quả";
+    self.currentPage = 1;
+    self.title = SearchResult;
     self.resultTableView.tableFooterView = [UIView new];
+    [self refreshAndLoadMorePage];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,6 +37,121 @@
 - (void)setUpUserInterface {
     [self showBackButton];
     self.resultTableView.estimatedRowHeight = 91.0;
+}
+
+#pragma mark - Refresh and Load More
+
+- (void)refreshAndLoadMorePage {
+    if (self.totalPage == 0) {
+        
+    } else {
+        [self.resultTableView addPullToRefreshWithActionHandler:^{
+            if (self.type == HOME) {
+                [self.resultTableView.infiniteScrollingView stopAnimating];
+                return;
+            }
+            
+            if (self.type == DISTRICT) {
+                [self refreshDistrict];
+            }
+            
+            if (self.type == CITY) {
+                [self refreshCity];
+            }
+         }];
+        
+        [self.resultTableView addInfiniteScrollingWithActionHandler:^{
+            if (self.type == HOME) {
+                [self.resultTableView.infiniteScrollingView stopAnimating];
+                return;
+            }
+            
+            if (self.type == DISTRICT) {
+                [self loadMoreDistrict];
+            }
+            
+            if (self.type == CITY) {
+                [self loadMoreCity];
+            }
+        }];
+    }
+}
+
+- (void)refreshDistrict {
+    [self searchHospitalWithCity:self.city hospitalDistrict:self.district page:1 loadMore:REFRESH];
+}
+
+- (void)refreshCity {
+    [self searchHospitalWithCity:self.city page:1 loadMore:REFRESH];
+}
+
+- (void)loadMoreDistrict {
+    if (self.currentPage < self.totalPage) {
+        self.resultTableView.showsInfiniteScrolling = YES;
+        [self searchHospitalWithCity:self.city hospitalDistrict:self.district page:self.currentPage + 1 loadMore:LOADMORE];
+    } else {
+        self.resultTableView.showsInfiniteScrolling = NO;
+    }
+}
+
+- (void)loadMoreCity {
+    if (self.currentPage < self.totalPage) {
+        self.resultTableView.showsInfiniteScrolling = YES;
+        [self searchHospitalWithCity:self.city page:self.currentPage+1 loadMore:LOADMORE];
+    } else {
+        self.resultTableView.showsInfiniteScrolling = NO;
+    }
+}
+
+- (void)displayData:(NSMutableArray *)data currentPage:(NSInteger)page loadMore:(LoadMore)loadMore {
+    if (loadMore == REFRESH) {
+        self.currentPage = page;
+        [self.hospitals removeAllObjects];
+        self.hospitals = data;
+        [self.resultTableView reloadData];
+        [self.resultTableView.pullToRefreshView stopAnimating];
+    }else {
+        self.currentPage = page;
+        [self.hospitals addObjectsFromArray:[data mutableCopy]];
+        [self.resultTableView reloadData];
+        [self.resultTableView.infiniteScrollingView stopAnimating];
+    }
+}
+
+- (void)searchHospitalWithCity:(NSString *)hospitalCity page:(NSInteger)page loadMore:(LoadMore)loadMore {
+    [self showHUD];
+    [ApiRequest getHospitalWithHospitalCity:hospitalCity page:page completion:^(ApiResponse *response, NSError *error) {
+        [self hideHUD];
+        if (error) {
+            [self showAlertWithTitle:@"Lỗi" message:error.localizedDescription];
+        }else {
+            NSMutableArray *hospitals = [NSMutableArray new];
+            NSArray *hospitalArray = [response.data objectForKey:@"hospitals"];
+            for (NSDictionary *hospitalData in hospitalArray) {
+                Hospital *hospital = [Hospital initWithRespone:hospitalData];
+                [hospitals addObject:hospital];
+            }
+            [self displayData:hospitals currentPage:page loadMore:loadMore];
+        }
+    }];
+}
+
+- (void)searchHospitalWithCity:(NSString *)hospitalCity hospitalDistrict:(NSString *)hostpitalDistrict page:(NSInteger)page loadMore:(LoadMore)loadMore {
+    [self showHUD];
+    [ApiRequest getHospitalWithHospitalCity:hospitalCity hospitalDistrict:hostpitalDistrict page:page completion:^(ApiResponse *response, NSError *error) {
+        [self hideHUD];
+        if (error) {
+            [self showAlertWithTitle:@"Lỗi" message:error.localizedDescription];
+        }else {
+            NSMutableArray *hospitals = [NSMutableArray new];
+            NSArray *hospitalArray = [response.data objectForKey:@"hospitals"];
+            for (NSDictionary *hospitalData in hospitalArray) {
+                Hospital *hospital = [Hospital initWithRespone:hospitalData];
+                [hospitals addObject:hospital];
+            }
+            [self displayData:hospitals currentPage:page loadMore:loadMore];
+        }
+    }];
 }
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource

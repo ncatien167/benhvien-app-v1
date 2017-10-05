@@ -7,6 +7,7 @@
 //
 
 #import "ForgetPasswordViewController.h"
+#import "ChangePasswordViewController.h"
 
 @interface ForgetPasswordViewController ()
 
@@ -24,40 +25,26 @@
 
 - (void)setUpUserInterface {
     self.sendCodeButton.layer.cornerRadius = 4.0;
-    self.title = @"Quên mật khẩu";
+    self.title = ForGetPassword;
+    [self showCancelButton];
+    
     NSDictionary *buttonAtt = @{NSFontAttributeName:[UIFont systemFontOfSize:15],
                                 NSForegroundColorAttributeName:[UIColor whiteColor]};
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Xong" style:UIBarButtonItemStylePlain target:self action:@selector(doneButtonPressed:)];
     [doneButton setTitleTextAttributes:buttonAtt forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = doneButton;
-    
-    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Huỷ bỏ" style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonPressed:)];
-    [cancelButton setTitleTextAttributes:buttonAtt forState:UIControlStateNormal];
-    self.navigationItem.leftBarButtonItem = cancelButton;
 }
 
 - (IBAction)doneButtonPressed:(id)sender {
-    
+    ChangePasswordViewController *changePasswordViewController = (ChangePasswordViewController *)[ChangePasswordViewController instanceFromStoryboardName:@"Login"];
+    BaseNavigationController *changePasswordNav = [[BaseNavigationController alloc] initWithRootViewController:changePasswordViewController];
+    [self presentViewController:changePasswordNav animated:true completion:nil];
 }
 
-- (IBAction)cancelButtonPressed:(id)sender {
-    [UIAlertController showAlertInViewController:self
-                                       withTitle:@"Xác nhận"
-                                         message:@"Bạn có chắc chắn muốn huỷ bỏ?"
-                               cancelButtonTitle:@"Cancel"
-                          destructiveButtonTitle:@"YES"
-                               otherButtonTitles:nil
-                                        tapBlock:^(UIAlertController *controller, UIAlertAction *action, NSInteger buttonIndex){
-                                            if (buttonIndex == controller.cancelButtonIndex) {
-                                                
-                                            } else if (buttonIndex == controller.destructiveButtonIndex) {
-                                                [self.navigationController dismissViewControllerAnimated:true completion:nil];
-                                            } else if (buttonIndex >= controller.firstOtherButtonIndex) {
-                                                
-                                            }
-                                        }];
+- (IBAction)changePasswordPressed:(id)sender {
+    ChangePasswordViewController *changePasswordViewController = (ChangePasswordViewController *)[ChangePasswordViewController instanceFromStoryboardName:@"Login"];
+    BaseNavigationController *changePasswordNav = [[BaseNavigationController alloc] initWithRootViewController:changePasswordViewController];
+    [self presentViewController:changePasswordNav animated:true completion:nil];
 }
-
-
 
 @end

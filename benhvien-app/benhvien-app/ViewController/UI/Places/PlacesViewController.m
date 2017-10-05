@@ -34,6 +34,7 @@
 
 - (void)setUpUserInterface {
     self.contentTableView.estimatedRowHeight = 44.0;
+    [self showCancelButton];
     NSDictionary *buttonAtt = @{NSFontAttributeName:[UIFont systemFontOfSize:15],
                                 NSForegroundColorAttributeName:[UIColor whiteColor]};
     
@@ -88,14 +89,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSArray *placesArray = [_searchResults objectAtIndex:indexPath.row];
-    NSString *places = [placesArray valueForKey:@"name"];
-    NSLog(@"ABC: %@",places);
-    [self dismissViewControllerAnimated:true completion:^{
-        [self setGetPlaces:^NSString *{
-            return places;
-        }];
-    }];
+    if (self.onGetPlacesCity) {
+        HNKGooglePlacesAutocompletePlace *data = _searchResults[indexPath.row];
+        self.onGetPlacesCity(data.name, self);
+    }
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 - (IBAction)cancelButtonPressed:(id)sender {

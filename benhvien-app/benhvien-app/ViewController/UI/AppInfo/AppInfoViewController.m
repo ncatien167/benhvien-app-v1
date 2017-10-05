@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Thông tin";
+    self.title = AppInfo;
 }
 
 - (void)didReceiveMemoryWarning {

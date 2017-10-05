@@ -8,7 +8,7 @@
 
 #import "ApiManager.h"
 #import "ApiEndpoint.h"
-
+#import "UserDataManager.h"
 @interface ApiManager ()
 {
     
@@ -32,11 +32,29 @@
 
 - (void)setupManager {
     self.manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    self.manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
 }
 
-- (void)requestApiWithEndpoint:(NSString *)endpoint method:(ApiMethod)method parameters:(NSDictionary *)parameters completion:(ApiCompletionBlock)completion {
+-(void)setupHeader {
+    [self.manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content_Type"];
+    [self.manager.requestSerializer setValue:[self getAccessToken] forHTTPHeaderField:@"Authorization"];
+}
+
+- (NSString *)getAccessToken {
+    NSString *token = [NSString stringWithFormat:@"JWT %@",[UserDataManager shareClient].accessToken];
+    return token;
+}
+
+- (void)requestApiWithEndpoint:(NSString *)endpoint
+                        method:(ApiMethod)method
+                    parameters:(NSDictionary *)parameters
+                       hasAuth:(BOOL)hasAuth
+                    completion:(ApiCompletionBlock)completion {
     NSString *fullURL = [NSString stringWithFormat:@"%@%@", BaseURL, endpoint];
+    if (hasAuth) {
+        [self setupHeader];
+    }
+    [self setupHeader];
     switch (method) {
         case GET: {
             [self processGetRequestWithURL:fullURL parameters:parameters completion:completion];
@@ -57,7 +75,9 @@
 
 #pragma mark - GET
 
-- (void)processGetRequestWithURL:(NSString *)url parameters:(NSDictionary *)parameters completion:(ApiCompletionBlock)completion {
+- (void)processGetRequestWithURL:(NSString *)url
+                      parameters:(NSDictionary *)parameters
+                      completion:(ApiCompletionBlock)completion {
     [self.manager GET:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self processSuccessWithRespone:responseObject completion:completion];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -67,7 +87,9 @@
 
 #pragma mark - POST
 
-- (void)processPostRequestWithURL:(NSString *)url parameters:(NSDictionary *)parameters completion:(ApiCompletionBlock)completion {
+- (void)processPostRequestWithURL:(NSString *)url
+                       parameters:(NSDictionary *)parameters
+                       completion:(ApiCompletionBlock)completion {
     [self.manager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self processSuccessWithRespone:responseObject completion:completion];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -76,7 +98,9 @@
 }
 
 #pragma mark - PUT
-- (void)processPutRequestWithURL:(NSString *)url parameters:(NSDictionary *)parameters completion:(ApiCompletionBlock)completion {
+- (void)processPutRequestWithURL:(NSString *)url
+                      parameters:(NSDictionary *)parameters
+                      completion:(ApiCompletionBlock)completion {
     [self.manager PUT:url parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self processSuccessWithRespone:responseObject completion:completion];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

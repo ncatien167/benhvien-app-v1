@@ -15,6 +15,8 @@
 #import "BaseTapBarController.h"
 #import <OCGoogleDirectionsAPI/OCGoogleDirectionsAPI.h>
 #import <HNKGooglePlacesAutocomplete/HNKGooglePlacesAutocomplete.h>
+#import "UserDataManager.h"
+#import "AccountViewController.h"
 @import GoogleMaps;
 
 @interface AppDelegate ()
@@ -25,8 +27,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupApplicationTheme];
-    [self setupFirstLoginScreen];
     [self setupApplicationData];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    if ([UserDataManager shareClient].accessToken &&
+        [UserDataManager shareClient].accessToken.length > 0) {
+        [self setupHomeScreen];
+    } else {
+        [self setupFirstLoginScreen];
+    }
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -37,24 +47,26 @@
 }
 
 - (void)setupFirstLoginScreen {
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self removeAllSubViews];
     FirstLoginViewController *firstLoginViewController = (FirstLoginViewController *)[FirstLoginViewController instanceFromStoryboardName:@"Login"];
     self.window.rootViewController = firstLoginViewController;
-    [self.window makeKeyAndVisible];
 }
 
 - (void)setupHomeScreen {
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self removeAllSubViews];
     HomeViewController *homeViewController = (HomeViewController *)[HomeViewController instanceFromStoryboardName:@"Home"];
     BaseNavigationController *homeNav = [[BaseNavigationController alloc] initWithRootViewController:homeViewController];
     
     AppInfoViewController *appInfoViewController = (AppInfoViewController *)[AppInfoViewController instanceFromStoryboardName:@"Home"];
     BaseNavigationController *appInfoNav = [[BaseNavigationController alloc] initWithRootViewController:appInfoViewController];
     
+    AccountViewController *accountViewController = (AccountViewController *)[AccountViewController instanceFromStoryboardName:@"Login"];
+    BaseNavigationController *accountNav = [[BaseNavigationController alloc] initWithRootViewController:accountViewController];
+    
     BaseTapBarController *tab = [BaseTapBarController new];
-    tab.viewControllers = @[homeNav, appInfoNav];
+    tab.viewControllers = @[accountNav ,homeNav, appInfoNav];
+    tab.selectedIndex = 1;
     self.window.rootViewController = tab;
-    [self.window makeKeyAndVisible];
 }
 
 - (void)setupApplicationTheme {
@@ -63,6 +75,13 @@
     
     NSDictionary *titleAttr = [[NSDictionary alloc] initWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil];
     [UINavigationBar appearance].titleTextAttributes = titleAttr;
+}
+
+- (void)removeAllSubViews {
+    NSArray *subViewArray = self.window.subviews;
+    for (id view in subViewArray) {
+        [view removeFromSuperview];
+    }
 }
 
 @end

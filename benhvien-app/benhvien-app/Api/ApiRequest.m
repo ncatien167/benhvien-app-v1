@@ -14,36 +14,36 @@
     NSDictionary *parameters = @{@"email": email,
                                  @"password": password
                                  };
-    [[ApiManager sharedClient] requestApiWithEndpoint:Login method:POST parameters:parameters completion:completion];
+    [[ApiManager sharedClient] requestApiWithEndpoint:Login method:POST parameters:parameters hasAuth:(BOOL)false completion:completion];
 }
 
 + (void)searchHospitalByName:(NSString *)name completionBlock:(ApiCompletionBlock)completion {
     NSDictionary *parameters = @{@"name": name,
                                  };
-    [[ApiManager sharedClient] requestApiWithEndpoint:SearchByName method:GET parameters:parameters completion:completion];
+    [[ApiManager sharedClient] requestApiWithEndpoint:SearchByName method:GET parameters:parameters hasAuth:(BOOL)true completion:completion];
 }
 
 + (void)getHospitalWithCompletion:(ApiCompletionBlock)completion {
-    [[ApiManager sharedClient] requestApiWithEndpoint:Cities method:GET parameters:nil completion:completion];
+    [[ApiManager sharedClient] requestApiWithEndpoint:Cities method:GET parameters:nil hasAuth:(BOOL)true completion:completion];
 }
 
-+ (void)getHospitalWithHospitalCity:(NSString *)name hospitalDistrict:(NSString *)districtes completion:(ApiCompletionBlock)completion {
++ (void)getHospitalWithHospitalCity:(NSString *)name hospitalDistrict:(NSString *)districtes page:(NSInteger)page completion:(ApiCompletionBlock)completion {
     NSDictionary *parameters = @{@"city": name,
-                                 @"district": districtes
-                                 };
-    [[ApiManager sharedClient] requestApiWithEndpoint:SearchByDistrictCity method:GET parameters:parameters completion:completion];
+                                 @"district": districtes,
+                                 @"page": @(page)};
+    [[ApiManager sharedClient] requestApiWithEndpoint:SearchByDistrictCity method:GET parameters:parameters hasAuth:(BOOL)true completion:completion];
 }
 
-+ (void)getHospitalWithHospitalCity:(NSString *)city completion:(ApiCompletionBlock)completion {
-    NSDictionary *parameters = @{@"city": city
-                                 };
-    [[ApiManager sharedClient] requestApiWithEndpoint:SearchByCity method:GET parameters:parameters completion:completion];
++ (void)getHospitalWithHospitalCity:(NSString *)city page:(NSInteger)page completion:(ApiCompletionBlock)completion {
+    NSDictionary *parameters = @{@"city": city,
+                                 @"page": @(page)};
+    [[ApiManager sharedClient] requestApiWithEndpoint:SearchByCity method:GET parameters:parameters hasAuth:(BOOL)true completion:completion];
 }
 
 + (void)getHospitalInfoWithId:(NSString *)_id completion:(ApiCompletionBlock)completion {
     NSDictionary *parameters = @{@"id": _id
                                  };
-    [[ApiManager sharedClient] requestApiWithEndpoint:HospitalInfo method:GET parameters:parameters completion:completion];
+    [[ApiManager sharedClient] requestApiWithEndpoint:HospitalInfo method:GET parameters:parameters hasAuth:(BOOL)true completion:completion];
 }
 
 + (void)registerUser:(NSString *)email password:(NSString *)password city:(NSString *)city fullName:(NSString *)fullName completion:completion {
@@ -52,7 +52,15 @@
                                  @"role": @"email",
                                  @"city": city,
                                  @"fullName": fullName};
-    [[ApiManager sharedClient] requestApiWithEndpoint:Register method:POST parameters:paramaters completion:completion];
+    [[ApiManager sharedClient] requestApiWithEndpoint:Register method:POST parameters:paramaters hasAuth:(BOOL)false completion:completion];
+}
+
++ (void)changePasswordWithUserId:(NSString *)userId oldPassword:(NSString *)oldPassword newPassword:(NSString *)newPassword completion:(ApiCompletionBlock)completion {
+    NSDictionary *paramaters = @{@"password": oldPassword,
+                                 @"newPassword": newPassword,
+                                 @"id": userId
+                                 };
+    [[ApiManager sharedClient] requestApiWithEndpoint:ChangePassword method:PUT parameters:paramaters hasAuth:true completion:completion];
 }
 
 @end

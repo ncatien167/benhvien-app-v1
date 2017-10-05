@@ -19,5 +19,6 @@
 #define SearchByCity            @"hospitals-city"
 #define HospitalInfo            @"hospitalInfo"
 #define Register                @"register"
+#define ChangePassword          @"changePass"
 
 #endif /* ApiEndpoint_h */

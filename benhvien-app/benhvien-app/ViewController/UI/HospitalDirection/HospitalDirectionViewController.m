@@ -10,6 +10,7 @@
 #import <OCGoogleDirectionsAPI/OCGoogleDirectionsAPI.h>
 
 @interface HospitalDirectionViewController ()<CLLocationManagerDelegate>
+
 {
     CLLocationManager *locationManager;
     CLLocationCoordinate2D currentLocation;
@@ -21,7 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@",self.hospital.name);
 }
     
 - (void)viewWillAppear:(BOOL)animated {
@@ -41,7 +41,7 @@
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone;
-    locationManager .desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     [locationManager requestWhenInUseAuthorization];
     [locationManager startUpdatingLocation];
 }
@@ -86,8 +86,7 @@
     marker.title = @"My location";
     marker.appearAnimation = kGMSMarkerAnimationPop;
     marker.map = self.mapView;
-    
-    marker.map=_mapView;
+    marker.map = _mapView;
     [locationManager stopUpdatingLocation];
     [self drawDirectionWithOriginLocation:[[CLLocation alloc] initWithLatitude:currentLocation.latitude longitude:currentLocation.longitude] destinationLocation:[[CLLocation alloc] initWithLatitude:self.hospital.latitude longitude:self.hospital.longitude]];
 }

@@ -23,6 +23,4 @@
 
 - (IBAction)segmentPressed:(UISegmentedControl *)sender;
 
-
-
 @end
