@@ -15,6 +15,8 @@
 
 @implementation BaseViewController
 
+@synthesize isSelectedMenu = _isSelectedMenu;
+
 - (void)dealloc {
     NSLog(@"[%@] dealloc",[self class]);
 }
@@ -95,8 +97,7 @@
 #pragma mark - Action
 
 - (IBAction)menuButtonPressed:(id)sender {
-    BaseTapBarController *tab = (BaseTapBarController *)self.tabBarController;
-    [tab animatedMenu:!tab.menuDisplayed];
+    
 }
 
 - (IBAction)backButtonPressed:(id)sender {

@@ -10,9 +10,12 @@
 #import "AdvanceSearchViewController.h"
 #import "SearchResultViewController.h"
 #import "BaseTapBarController.h"
+#import "MenuView.h"
 
 @interface HomeViewController ()
-
+{
+    BaseTapBarController *tab;
+}
 @end
 
 @implementation HomeViewController
@@ -20,6 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = SearchByNameView;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handelAfterLogin) name:@"loginSuccess" object:nil];
+}
+
+- (void)handelAfterLogin{
+    self.overrideView.hidden = true;
+    self.homeView.hidden = false;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,6 +37,8 @@
 }
 
 - (void)setUpUserInterface {
+    tab = (BaseTapBarController *)self.tabBarController;
+    self.overrideView.hidden = true;
     self.searchTextField.layer.cornerRadius = 4.0;
     self.searchTextField.layer.borderWidth = 0.5;
     self.searchTextField.layer.borderColor = [UIColor colorWithHex:0xC8C7CC].CGColor;
@@ -35,6 +46,31 @@
     self.advanceSearchButton.layer.cornerRadius = 4.0;
     [self showMenuButton];
 }
+
+- (void)closeMenu {
+    if (tab.menuDisplayed) {
+        self.overrideView.hidden = false;
+        self.homeView.hidden = true;
+    } else {
+        self.overrideView.hidden = true;
+        self.homeView.hidden = false;
+    }
+}
+
+- (IBAction)menuButtonPressed:(id)sender {
+    [tab animatedMenu:!tab.menuDisplayed];
+    [self closeMenu];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (tab.menuDisplayed) {
+        [tab animatedMenu:!tab.menuDisplayed];
+        self.overrideView.hidden = true;
+        self.homeView.hidden = false;
+    }
+}
+
+#pragma mark - Search Hospital
 
 - (void)searchHospital:(NSString *)hostpitalName {
     [self showHUD];
@@ -72,12 +108,6 @@
         return;
     }
     completion(YES, @"");
-}
-
-- (void)menuButtonPressed:(id)sender {
-    [self.searchTextField endEditing:NO];
-    [self.searchTextField setUserInteractionEnabled:NO];
-    [super menuButtonPressed:self];
 }
 
 - (IBAction)advanceSearchButtonPressed:(id)sender {

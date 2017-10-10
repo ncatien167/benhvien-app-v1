@@ -28,6 +28,7 @@
 - (void)hideHUD;
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
 - (void)showAlertWithTitle;
+
 - (IBAction)menuButtonPressed:(id)sender;
 
 @end

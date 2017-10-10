@@ -18,7 +18,6 @@
 @property (strong, nonatomic) MenuView *menuView;
 @property (strong, nonatomic) UIWindow *window;
 
-
 @end
 
 @implementation BaseTapBarController

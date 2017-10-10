@@ -21,12 +21,27 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
 }
 
 - (void)setUpUserInterface {
     [self showMenuButton];
 }
 
+- (void)showMenuButton {
+    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav-menu"] style:UIBarButtonItemStylePlain target:self action:@selector(menuButtonPressed:)];
+    self.navigationItem.leftBarButtonItem = menuButton;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    BaseTapBarController *tab = (BaseTapBarController *)self.tabBarController;
+    if (tab.menuDisplayed) {
+        [tab animatedMenu:!tab.menuDisplayed];
+    }
+}
+
+- (IBAction)menuButtonPressed:(id)sender {
+    BaseTapBarController *tab = (BaseTapBarController *)self.tabBarController;
+    [tab animatedMenu:!tab.menuDisplayed];
+}
 
 @end

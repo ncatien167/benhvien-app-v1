@@ -26,6 +26,8 @@
 #define UserCity                                @"UserCity"
 #define UserFullName                            @"UserFullName"
 
+#define MenuIsClose                             @"MenuIsClose"
+
 typedef enum {
     DISTRICT,
     CITY,

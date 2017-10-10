@@ -21,58 +21,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtb-0U-QAi">
-                                <rect key="frame" x="310" y="80" width="45" height="45"/>
-                                <color key="backgroundColor" red="0.82352941176470584" green="0.13725490196078433" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFP-gs-G7O" userLabel="Override View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home Screen" translatesAutoresizingMaskIntoConstraints="NO" id="ahb-As-7IZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Egl-Qs-uqH"/>
-                                    <constraint firstAttribute="width" constant="45" id="sSx-iC-hkq"/>
+                                    <constraint firstItem="ahb-As-7IZ" firstAttribute="leading" secondItem="VFP-gs-G7O" secondAttribute="leading" id="99P-Ps-qU5"/>
+                                    <constraint firstItem="ahb-As-7IZ" firstAttribute="top" secondItem="VFP-gs-G7O" secondAttribute="top" id="Ap8-Gv-jim"/>
+                                    <constraint firstAttribute="bottom" secondItem="ahb-As-7IZ" secondAttribute="bottom" id="oCs-Bh-yhL"/>
+                                    <constraint firstAttribute="trailing" secondItem="ahb-As-7IZ" secondAttribute="trailing" id="xI4-8C-RXk"/>
                                 </constraints>
-                                <state key="normal" image="search-btn-icon"/>
-                                <connections>
-                                    <action selector="searchButtonPressed:" destination="0Wc-sa-CwK" eventType="touchUpInside" id="e8o-qe-DEn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNm-aH-sdh">
-                                <rect key="frame" x="20" y="185" width="335" height="45"/>
-                                <color key="backgroundColor" red="0.18431372549019609" green="0.54509803921568623" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wnl-Bd-2K8" userLabel="Home View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNm-aH-sdh">
+                                        <rect key="frame" x="20" y="165" width="335" height="45"/>
+                                        <color key="backgroundColor" red="0.18431372549019609" green="0.54509803921568623" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="8Os-nQ-Fu3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Tìm kiếm nâng cao">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="advanceSearchButtonPressed:" destination="0Wc-sa-CwK" eventType="touchUpInside" id="g0V-Xa-YSs"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập tên bệnh viện" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AD2-9G-df6">
+                                        <rect key="frame" x="20" y="60" width="280" height="45"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Ny7-iN-6ts"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.30196078430000001" green="0.29411764709999999" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtb-0U-QAi">
+                                        <rect key="frame" x="310" y="60" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.82352941176470584" green="0.13725490196078433" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="BGc-Ka-e89"/>
+                                            <constraint firstAttribute="width" constant="45" id="uEm-td-Ped"/>
+                                        </constraints>
+                                        <state key="normal" image="search-btn-icon"/>
+                                        <connections>
+                                            <action selector="searchButtonPressed:" destination="0Wc-sa-CwK" eventType="touchUpInside" id="e8o-qe-DEn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="kCR-eU-xeU"/>
+                                    <constraint firstAttribute="trailing" secondItem="zNm-aH-sdh" secondAttribute="trailing" constant="20" id="CER-X1-OKW"/>
+                                    <constraint firstItem="AD2-9G-df6" firstAttribute="leading" secondItem="Wnl-Bd-2K8" secondAttribute="leading" constant="20" id="M9d-0g-O6m"/>
+                                    <constraint firstItem="Jtb-0U-QAi" firstAttribute="top" secondItem="Wnl-Bd-2K8" secondAttribute="top" constant="60" id="Nmx-p3-cc2"/>
+                                    <constraint firstItem="zNm-aH-sdh" firstAttribute="top" secondItem="Jtb-0U-QAi" secondAttribute="bottom" constant="60" id="Px8-a9-4Bx"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jtb-0U-QAi" secondAttribute="trailing" constant="20" id="VLy-zl-w5P"/>
+                                    <constraint firstItem="AD2-9G-df6" firstAttribute="top" secondItem="Wnl-Bd-2K8" secondAttribute="top" constant="60" id="YWA-YX-rMg"/>
+                                    <constraint firstItem="Jtb-0U-QAi" firstAttribute="leading" secondItem="AD2-9G-df6" secondAttribute="trailing" constant="10" id="pLi-Gl-Xuh"/>
+                                    <constraint firstItem="zNm-aH-sdh" firstAttribute="leading" secondItem="Wnl-Bd-2K8" secondAttribute="leading" constant="20" id="sHk-BA-ahc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Tìm kiếm nâng cao">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="advanceSearchButtonPressed:" destination="0Wc-sa-CwK" eventType="touchUpInside" id="g0V-Xa-YSs"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập tên bệnh viện" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AD2-9G-df6">
-                                <rect key="frame" x="20" y="80" width="280" height="45"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="hpp-8o-eJo"/>
-                                </constraints>
-                                <color key="textColor" red="0.30196078430000001" green="0.29411764709999999" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="zNm-aH-sdh" secondAttribute="trailing" constant="20" id="2ag-R9-D1b"/>
-                            <constraint firstItem="AD2-9G-df6" firstAttribute="top" secondItem="epN-kK-mKh" secondAttribute="bottom" constant="60" id="D5C-sN-Ytn"/>
-                            <constraint firstAttribute="trailing" secondItem="Jtb-0U-QAi" secondAttribute="trailing" constant="20" id="NGC-dE-8g5"/>
-                            <constraint firstItem="zNm-aH-sdh" firstAttribute="top" secondItem="AD2-9G-df6" secondAttribute="bottom" constant="60" id="RU8-5U-kra"/>
-                            <constraint firstItem="zNm-aH-sdh" firstAttribute="leading" secondItem="jWf-xR-tjE" secondAttribute="leading" constant="20" id="XvG-3s-SNZ"/>
-                            <constraint firstItem="Jtb-0U-QAi" firstAttribute="leading" secondItem="AD2-9G-df6" secondAttribute="trailing" constant="10" id="fnp-ej-U4p"/>
-                            <constraint firstItem="Jtb-0U-QAi" firstAttribute="top" secondItem="epN-kK-mKh" secondAttribute="bottom" constant="60" id="pNc-YY-ygV"/>
-                            <constraint firstItem="AD2-9G-df6" firstAttribute="leading" secondItem="jWf-xR-tjE" secondAttribute="leading" constant="20" id="rgt-38-U7D"/>
+                            <constraint firstAttribute="trailing" secondItem="Wnl-Bd-2K8" secondAttribute="trailing" id="41e-ms-wii"/>
+                            <constraint firstAttribute="trailing" secondItem="VFP-gs-G7O" secondAttribute="trailing" id="GD3-EE-1at"/>
+                            <constraint firstItem="7GR-g4-fAY" firstAttribute="top" secondItem="VFP-gs-G7O" secondAttribute="bottom" id="Jac-7E-f8s"/>
+                            <constraint firstItem="7GR-g4-fAY" firstAttribute="top" secondItem="Wnl-Bd-2K8" secondAttribute="bottom" id="YW1-Ds-N3o"/>
+                            <constraint firstItem="VFP-gs-G7O" firstAttribute="top" secondItem="jWf-xR-tjE" secondAttribute="top" id="bkd-Ni-lqT"/>
+                            <constraint firstItem="Wnl-Bd-2K8" firstAttribute="top" secondItem="jWf-xR-tjE" secondAttribute="top" id="kD0-EJ-V2i"/>
+                            <constraint firstItem="VFP-gs-G7O" firstAttribute="leading" secondItem="jWf-xR-tjE" secondAttribute="leading" id="vW4-jG-oAj"/>
+                            <constraint firstItem="Wnl-Bd-2K8" firstAttribute="leading" secondItem="jWf-xR-tjE" secondAttribute="leading" id="yln-08-8VH"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="advanceSearchButton" destination="zNm-aH-sdh" id="5br-Sj-TeH"/>
+                        <outlet property="homeView" destination="Wnl-Bd-2K8" id="dI2-Oj-aKx"/>
+                        <outlet property="overrideView" destination="VFP-gs-G7O" id="M9g-Ns-mVE"/>
                         <outlet property="searchButton" destination="Jtb-0U-QAi" id="mYA-by-d5f"/>
                         <outlet property="searchTextField" destination="AD2-9G-df6" id="11r-eZ-xtz"/>
                     </connections>
@@ -420,11 +453,11 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ria-oD-EVL">
                                 <rect key="frame" x="20" y="30" width="335" height="301"/>
-                                <mutableString key="text">Ứng dụng bệnh viện cho điện thoại IOS giúp bạn tìm kiếm thông tin và đường đi đến một bệnh viện nhanh chóng và dễ dàng hơn bao giờ hết. Sau khi tìm thấy một bệnh viện tốt nhất bạn có thể nhanh chóng liên hệ đến bệnh viện đó ngay trong ứng dụng để đặt chổ khám chữa bệnh.  1) Bao gồm nhiều bệnh viện và phòng khám tại Việt Nam.
+                                <string key="text">Ứng dụng bệnh viện cho điện thoại IOS giúp bạn tìm kiếm thông tin và đường đi đến một bệnh viện nhanh chóng và dễ dàng hơn bao giờ hết. Sau khi tìm thấy một bệnh viện tốt nhất bạn có thể nhanh chóng liên hệ đến bệnh viện đó ngay trong ứng dụng để đặt chổ khám chữa bệnh.  1) Bao gồm nhiều bệnh viện và phòng khám tại Việt Nam.
 2) Chức năng tìm kiếm bệnh viện dễ sử dụng và hiệu quả cao.
 3) Hiển thị thing tin chi tiết của cdc cơ sở chum chữa bệnh.
 4) Hiển thị đường đi một cásh rõ ràng, gijp bạn đến cáo cơ sở khám chữa bệnh một cách nhanh nhất.
-5) Dữ liệu được cập nhập thường xuyên, bạn cũng có thể đóng gup bằng cách thêm vào cáo bệnh viện mới.</mutableString>
+5) Dữ liệu được cập nhập thường xuyên, bạn cũng có thể đóng gup bằng cách thêm vào cáo bệnh viện mới.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.30196078431372547" green="0.29411764705882354" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -445,6 +478,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Home Screen" width="345" height="555"/>
         <image name="caret-down" width="20" height="12"/>
         <image name="phone-call-icon" width="24" height="24"/>
         <image name="right-arrow" width="9" height="14"/>
