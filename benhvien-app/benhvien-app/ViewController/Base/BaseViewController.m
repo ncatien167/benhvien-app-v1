@@ -15,8 +15,6 @@
 
 @implementation BaseViewController
 
-@synthesize isSelectedMenu = _isSelectedMenu;
-
 - (void)dealloc {
     NSLog(@"[%@] dealloc",[self class]);
 }

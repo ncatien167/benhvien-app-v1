@@ -91,10 +91,14 @@
     }];
 }
 
-- (void)registerAccountWithUserName:(NSString *)name email:(NSString *)email password:(NSString *)password city:(NSString *)city {
-    [self validateRegisterUserName:name email:email password:password city:city completion:^(BOOL isValidate, NSString *message) {
+- (void)registerAccountWithUserName {
+    NSString *userName = self.usernameTextField.text;
+    NSString *city = self.cityTextField.text;
+    NSString *registerPassword = self.passwordTextField.text;
+    NSString *registerEmail = self.emailTextField.text;
+    [self validateRegisterUserName:userName email:registerEmail password:registerPassword city:city completion:^(BOOL isValidate, NSString *message) {
         if (isValidate) {
-            [self registerAccountWithEmail:name password:password city:city fullname:name];
+            [self registerAccountWithEmail:registerEmail password:registerPassword city:city fullname:userName];
         } else {
             [self showAlertWithTitle:@"Lỗi" message:message];
         }
@@ -116,10 +120,6 @@
         return;
     }
     
-    if (!password || password.length < 6) {
-        completion(NO, @"Mật khẩu phải có it nhất 7 kí tự");
-        return;
-    }
     completion(YES, @"");
 }
 
@@ -137,7 +137,9 @@
     }];
 }
 
-- (void)loginWithEmail:(NSString *)email password:(NSString *)password {
+- (void)loginWithEmail {
+    NSString *email = self.enterUsernameTextField.text;
+    NSString *password = self.enterPasswordTextField.text;
     [self validateSignInWithEmail:email password:password completion:^(BOOL isValidate, NSString *message) {
         if (isValidate) {
             [self signInWithEmail:email password:password];
@@ -147,21 +149,15 @@
     }];
 }
 
+#pragma mark - Action Login View Controller
+
 - (IBAction)doneButtonPressed:(id)sender {
-    NSString *email = self.enterUsernameTextField.text;
-    NSString *password = self.enterPasswordTextField.text;
-    NSString *userName = self.usernameTextField.text;
-    NSString *city = self.cityTextField.text;
-    NSString *registerPassword = self.passwordTextField.text;
-    NSString *registerEmail = self.emailTextField.text;
     if (self.signInUpSegment.selectedSegmentIndex == 0) {
-        [self registerAccountWithEmail:registerEmail password:registerPassword city:city fullname:userName];
+        [self registerAccountWithUserName];
     } else {
-        [self loginWithEmail:email password:password];
+        [self loginWithEmail];
     }
 }
-
-#pragma mark - Action Login View Controller
 
 - (IBAction)segmentPressed:(UISegmentedControl *)sender {
     if (self.signInUpSegment.selectedSegmentIndex == 0) {

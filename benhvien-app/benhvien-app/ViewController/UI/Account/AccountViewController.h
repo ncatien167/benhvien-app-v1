@@ -10,6 +10,7 @@
 
 @interface AccountViewController : BaseViewController
 
+@property (weak, nonatomic) IBOutlet UIView *overrideView;
 @property (weak, nonatomic) IBOutlet UILabel *fullNameLable;
 @property (weak, nonatomic) IBOutlet UILabel *emailLable;
 @property (weak, nonatomic) IBOutlet UILabel *cityLable;

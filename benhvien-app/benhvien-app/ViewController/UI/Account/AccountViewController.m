@@ -11,6 +11,9 @@
 #import "ChangePasswordViewController.h"
 
 @interface AccountViewController ()
+{
+    BaseTapBarController *tab;
+}
 
 @end
 
@@ -18,6 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handelAfterLogin) name:@"isClosing" object:nil];
+}
+
+- (void)handelAfterLogin{
+    self.overrideView.hidden = true;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,27 +34,35 @@
 
 - (void)setUpUserInterface {
     self.title = Account;
+    self.overrideView.hidden = true;
+    tab = (BaseTapBarController *)self.tabBarController;
     [self showMenuButton];
+    
     self.fullNameLable.text = [UserDataManager shareClient].fullname;
-    self.emailLable.text = [UserDataManager shareClient].email;
-    self.cityLable.text = [UserDataManager shareClient].city;
+    self.emailLable.text    = [UserDataManager shareClient].email;
+    self.cityLable.text     = [UserDataManager shareClient].city;
+}
+
+- (void)closeMenu {
+    if (tab.menuDisplayed) {
+        self.overrideView.hidden = false;
+    } else {
+        self.overrideView.hidden = true;
+    }
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     BaseTapBarController *tab = (BaseTapBarController *)self.tabBarController;
     if (tab.menuDisplayed) {
         [tab animatedMenu:!tab.menuDisplayed];
+        self.overrideView.hidden = true;
     }
-}
-
-- (void)showMenuButton {
-    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav-menu"] style:UIBarButtonItemStylePlain target:self action:@selector(menuButtonPressed:)];
-    self.navigationItem.leftBarButtonItem = menuButton;
 }
 
 - (IBAction)menuButtonPressed:(id)sender {
     BaseTapBarController *tab = (BaseTapBarController *)self.tabBarController;
     [tab animatedMenu:!tab.menuDisplayed];
+    [self closeMenu];
 }
 
 - (IBAction)changePasswordPressed:(id)sender {

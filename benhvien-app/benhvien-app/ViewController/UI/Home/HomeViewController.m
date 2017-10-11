@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = SearchByNameView;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handelAfterLogin) name:@"loginSuccess" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handelAfterLogin) name:@"isClosing" object:nil];
 }
 
 - (void)handelAfterLogin{

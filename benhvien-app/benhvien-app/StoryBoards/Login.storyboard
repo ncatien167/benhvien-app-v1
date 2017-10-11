@@ -868,23 +868,32 @@
                                     <action selector="changePasswordPressed:" destination="b1h-ST-eWK" eventType="touchUpInside" id="nMA-rc-chB"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVU-eP-8yg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="iVU-eP-8yg" firstAttribute="top" secondItem="pMh-8k-jz6" secondAttribute="top" id="0f7-Ml-kO8"/>
                             <constraint firstItem="SGB-UF-wm4" firstAttribute="top" secondItem="brM-Ta-sD3" secondAttribute="bottom" constant="20" id="5fn-Xm-pBV"/>
+                            <constraint firstItem="iVU-eP-8yg" firstAttribute="leading" secondItem="pMh-8k-jz6" secondAttribute="leading" id="Ajg-qv-Kfa"/>
                             <constraint firstItem="aYO-zp-u7P" firstAttribute="leading" secondItem="pMh-8k-jz6" secondAttribute="leading" id="BrX-LP-vOZ"/>
                             <constraint firstItem="SGB-UF-wm4" firstAttribute="centerX" secondItem="pMh-8k-jz6" secondAttribute="centerX" id="H5V-2j-Pdb"/>
                             <constraint firstItem="VMB-73-NoA" firstAttribute="top" secondItem="SGB-UF-wm4" secondAttribute="bottom" constant="30" id="Hit-z1-gBO"/>
                             <constraint firstAttribute="trailing" secondItem="aYO-zp-u7P" secondAttribute="trailing" id="IXr-2K-zSe"/>
                             <constraint firstItem="ELP-E8-PV2" firstAttribute="top" secondItem="aYO-zp-u7P" secondAttribute="bottom" id="Q7o-da-w6H"/>
+                            <constraint firstAttribute="trailing" secondItem="iVU-eP-8yg" secondAttribute="trailing" id="Tvd-uS-2TG"/>
                             <constraint firstAttribute="trailing" secondItem="VMB-73-NoA" secondAttribute="trailing" id="YAL-jg-ho6"/>
                             <constraint firstItem="VMB-73-NoA" firstAttribute="leading" secondItem="pMh-8k-jz6" secondAttribute="leading" id="m2M-IT-jkL"/>
+                            <constraint firstItem="ELP-E8-PV2" firstAttribute="top" secondItem="iVU-eP-8yg" secondAttribute="bottom" id="ty6-JZ-PGw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cityLable" destination="PII-Pf-YK3" id="Uro-Fh-sEz"/>
                         <outlet property="emailLable" destination="sNA-IQ-W8N" id="BUH-UC-iTM"/>
                         <outlet property="fullNameLable" destination="gog-A1-bHe" id="WqM-3r-tyd"/>
+                        <outlet property="overrideView" destination="iVU-eP-8yg" id="7iJ-hu-Jh5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okl-bB-s6p" userLabel="First Responder" sceneMemberID="firstResponder"/>

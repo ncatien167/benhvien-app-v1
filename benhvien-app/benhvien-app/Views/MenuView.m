@@ -78,7 +78,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.onDidSelectedItemIndex) {
         self.onDidSelectedItemIndex(indexPath.row + 1);
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"loginSuccess" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"isClosing" object:nil];
     }
     
 }
